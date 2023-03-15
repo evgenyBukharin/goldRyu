@@ -24,6 +24,10 @@
 		font-size: 16px;
 		line-height: 100%;
 		color: var(--darker-blue-color);
+		&-active {
+			text-decoration: underline;
+			color: var(--light-blue-color);
+		}
 	}
 }
 
