@@ -1,2 +1,143 @@
 .footer {
+	border-top: 1px solid var(--footer-border-color);
+	padding-top: 49px;
+	padding-bottom: 49px;
+	&__container {
+		max-width: 1604px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&-logo {
+			min-width: 201px;
+			min-height: 48px;
+		}
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		& .footer__item {
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+		}
+		&:last-child {
+			max-width: 369px;
+			& .footer__link {
+				text-decoration: none;
+				pointer-events: none;
+			}
+			& .footer__item {
+				&:not(:last-child) {
+					margin-bottom: 18px;
+				}
+			}
+		}
+	}
+	&__item {
+		&-right {
+			text-align: right;
+		}
+		&-left {
+			text-align: left;
+		}
+	}
+	&__link {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 130%;
+		text-decoration-line: underline;
+		color: var(--dark-blue-color);
+	}
+}
+
+@media (max-width: 1024px) {
+	.footer {
+		&__container {
+			&-logo {
+				padding-right: 20px;
+				padding-left: 20px;
+			}
+		}
+		&__list {
+			&:last-child {
+				& .footer__link {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.footer {
+		&__container {
+			align-items: start;
+			&-logo {
+				order: 3;
+				padding: 0;
+				align-self: center;
+			}
+		}
+		&__item {
+			&-right {
+				text-align: left;
+			}
+			&-left {
+				text-align: left;
+			}
+		}
+		&__link {
+			font-size: 12px !important;
+		}
+		&__list {
+			display: flex;
+			flex-direction: column;
+			padding-right: 18px;
+			box-sizing: content-box;
+			& .footer__item {
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+			&:first-child {
+				max-width: 150px;
+			}
+			&:last-child {
+				max-width: 267px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.footer {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		&__container {
+			flex-wrap: wrap;
+			&-logo {
+				margin: 0 auto;
+				margin-top: 35px;
+				justify-self: center;
+			}
+		}
+		&__item {
+			&-right {
+				text-align: left;
+			}
+			&-left {
+				text-align: right;
+			}
+		}
+		&__list {
+			padding-right: 0;
+			&:first-child {
+				max-width: 205px;
+			}
+			&:last-child {
+				max-width: 205px;
+			}
+		}
+	}
 }
