@@ -1,4 +1,6 @@
 .nav {
+	position: relative;
+	z-index: 30;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -15,9 +17,32 @@
 		align-items: center;
 		row-gap: 8px;
 		column-gap: 30px;
+		&-inner {
+			background: var(--grey-color);
+			padding: 35px 20px 20px 15px;
+			position: absolute;
+			left: -15px;
+			top: 17px;
+			border-radius: 0px 0px 10px 10px;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+			z-index: 40;
+			&:hover {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
 	}
 	&__item {
+		position: relative;
 		text-align: center;
+		&-inner {
+			text-align: start;
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
 	}
 	&__link {
 		font-weight: 500;
@@ -27,6 +52,21 @@
 		&-active {
 			text-decoration: underline;
 			color: var(--light-blue-color);
+		}
+		&-inner {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			color: var(--dark-blue-color);
+			white-space: nowrap;
+			transition: color 0.3s ease-out;
+			&:hover {
+				color: var(--blue-color);
+			}
+		}
+		&-cleaning:hover + .nav__list-inner {
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 }
