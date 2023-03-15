@@ -61,3 +61,15 @@
 		}
 	}
 }
+
+@media (max-width: 360px) {
+	.cleaning-hero {
+		&__container {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		&__list {
+			gap: 24px;
+		}
+	}
+}
