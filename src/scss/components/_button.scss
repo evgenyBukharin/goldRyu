@@ -1,0 +1,18 @@
+.button {
+	padding: 5px 15px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--grey-color);
+	border-radius: 10px;
+	transition: background 0.3s ease;
+	&__primary {
+		background: var(--light-blue-color);
+		&:active {
+			background: var(--dark-blue-color);
+		}
+		&:hover {
+			background: var(--blue-color);
+		}
+	}
+}

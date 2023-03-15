@@ -1,0 +1,52 @@
+@include font-face("Montserrat", "../fonts/Montserrat-Regular", 400, normal);
+@include font-face("Montserrat", "../fonts/Montserrat-Bold", 700, normal);
+@include font-face("Montserrat", "../fonts/Montserrat-Medium", 500, normal);
+@include font-face("Montserrat", "../fonts/Montserrat-SemiBold", 600, normal);
+@include font-face(
+	"Montserrat",
+	"../fonts/Montserrat-MediumItalic",
+	500,
+	italic
+);
+@include font-face("Montserrat", "../fonts/Montserrat-ExtraLight", 200, normal);
+
+@include font-face("Nunito", "../fonts/Nunito-Regular", 400, normal);
+@include font-face("Nunito", "../fonts/Nunito-Bold", 700, normal);
+@include font-face("Nunito", "../fonts/Nunito-SemiBold", 600, normal);
+
+@include font-face("Roboto", "../fonts/Roboto-Medium", 500, normal);
+
+@include font-face(
+	"Roboto-serif",
+	"../fonts/Roboto-serif-semibold",
+	600,
+	normal
+);
+
+@include font-face(
+	"Montserrat Alternates",
+	"../fonts/MontserratAlternates-Regular",
+	400,
+	normal
+);
+@include font-face(
+	"Montserrat Alternates",
+	"../fonts/MontserratAlternates-Bold",
+	700,
+	normal
+);
+@include font-face(
+	"Montserrat Alternates",
+	"../fonts/MontserratAlternates-Medium",
+	500,
+	normal
+);
+@include font-face(
+	"Montserrat Alternates",
+	"../fonts/MontserratAlternates-Semibold",
+	600,
+	normal
+);
+
+@include font-face("Inter", "../fonts/Inter-Medium", 600, normal);
+@include font-face("Inter", "../fonts/Inter-Regular", 600, normal);

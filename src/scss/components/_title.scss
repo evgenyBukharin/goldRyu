@@ -1,0 +1,30 @@
+.title {
+	&__h1 {
+		font-family: "Montserrat Alternates";
+		font-weight: 700;
+		font-size: 52px;
+		line-height: 100%;
+		color: var(--dark-blue-color);
+	}
+	&__h2 {
+		font-family: "Montserrat Alternates";
+		font-weight: 600;
+		font-size: 45px;
+		line-height: 55px;
+		color: var(--dark-blue-color);
+	}
+	&__h3 {
+		font-family: "Montserrat";
+		font-weight: 600;
+		font-size: 28px;
+		line-height: 30px;
+		color: var(--dark-blue-color);
+	}
+	&__h4 {
+		font-family: "Montserrat";
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 25px;
+		color: var(--dark-blue-color);
+	}
+}
