@@ -5,7 +5,7 @@
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		column-gap: 30px;
+		gap: 30px;
 	}
 	&__item {
 		grid-column: 4 span;
@@ -24,5 +24,40 @@
 		text-align: center;
 		margin-top: 15px;
 		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 1024px) {
+	.cleaning-hero {
+		&__container {
+			padding-bottom: 120px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.cleaning-hero {
+		&__item {
+			grid-column: 6 span;
+			&:last-child {
+				grid-column: 12 span;
+				justify-self: center;
+				min-width: 410px;
+				min-height: 170px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.cleaning-hero {
+		&__item {
+			grid-column: 12 span;
+			&:last-child {
+				min-width: unset;
+				min-height: unset;
+				justify-self: unset;
+			}
+		}
 	}
 }
