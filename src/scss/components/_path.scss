@@ -1,0 +1,32 @@
+.path {
+	&__container {
+		padding-top: 50px;
+		padding-bottom: 30px;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+	&__item {
+		position: relative;
+		&:not(:last-child) {
+			margin-right: 21px;
+			&::after {
+				content: url("../img/right-arrow.svg");
+				position: absolute;
+				top: 50%;
+				right: -18px;
+				transform: translateY(-42%);
+				width: 11px;
+				height: 23px;
+			}
+		}
+	}
+	&__link {
+		font-family: "Montserrat Alternates";
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 130%;
+		color: var(--darker-blue-color);
+	}
+}
