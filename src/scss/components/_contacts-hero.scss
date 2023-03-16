@@ -1,6 +1,9 @@
 .contacts-hero {
 	&__container {
 		padding-bottom: 150px;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
 	}
 	&__title {
 		margin: 0;
@@ -23,7 +26,6 @@
 		}
 	}
 	&__list {
-		margin-top: 30px;
 		padding-left: 39px;
 	}
 	&__item {
@@ -43,5 +45,15 @@
 		top: 50%;
 		left: -24px;
 		transform: translate(-50%, -50%);
+	}
+	&__map {
+		width: 740px;
+		height: 400px;
+		filter: drop-shadow(-63.3888px 84.958px 80px rgba(0, 0, 0, 0.02768))
+			drop-shadow(-38.7987px 52.0007px 41.728px rgba(0, 0, 0, 0.04384))
+			drop-shadow(-21.6718px 29.046px 19.584px rgba(0, 0, 0, 0.05616))
+			drop-shadow(-10.8598px 14.5551px 8.576px rgba(0, 0, 0, 0.07232))
+			drop-shadow(-5.21463px 6.989px 3.712px rgba(0, 0, 0, 0.1));
+		border-radius: 15px;
 	}
 }
