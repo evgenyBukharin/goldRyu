@@ -10,9 +10,9 @@
 );
 @include font-face("Montserrat", "../fonts/Montserrat-ExtraLight", 200, normal);
 
-@include font-face("Nunito", "../fonts/Nunito-Regular", 400, normal);
-@include font-face("Nunito", "../fonts/Nunito-Bold", 700, normal);
-@include font-face("Nunito", "../fonts/Nunito-SemiBold", 600, normal);
+@include font-face("Nunito Sans", "../fonts/NunitoSans-Regular", 400, normal);
+@include font-face("Nunito Sans", "../fonts/NunitoSans-Bold", 700, normal);
+@include font-face("Nunito Sans", "../fonts/NunitoSans-SemiBold", 600, normal);
 
 @include font-face("Roboto", "../fonts/Roboto-Medium", 500, normal);
 

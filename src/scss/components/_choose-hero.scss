@@ -1,4 +1,68 @@
 .choose-hero {
 	&__container {
+		padding-bottom: 175px;
+		&-text {
+			max-width: 379px;
+		}
+	}
+	&__title {
+		margin: 0;
+	}
+	&__banner {
+		margin-top: 30px;
+		padding: 52px 73px 50px 106px;
+		background: var(--light-blue-color);
+		color: var(--white-color);
+		box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.1);
+		border-radius: 15px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__subtitle {
+		margin: 0;
+		margin-top: 39px;
+		color: inherit;
+		&-text {
+			color: inherit;
+			margin: 0;
+			margin-top: 20px;
+		}
+	}
+	&__button {
+		background: var(--blue-color);
+		margin-top: 30px;
+		&-share {
+			margin-top: 72px;
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__image {
+		filter: drop-shadow(
+				-90.0271px 71.5551px 80px rgba(38, 38, 38, 0.0266875)
+			)
+			drop-shadow(-67.6151px 53.7417px 53.9219px rgba(38, 38, 38, 0.0455))
+			drop-shadow(
+				-49.4415px 39.297px 34.875px rgba(38, 38, 38, 0.0590625)
+			)
+			drop-shadow(-35.1209px 27.9147px 21.6406px rgba(38, 38, 38, 0.07))
+			drop-shadow(-24.2682px 19.2888px 13px rgba(38, 38, 38, 0.0809375))
+			drop-shadow(-16.4978px 13.1128px 7.73438px rgba(38, 38, 38, 0.0945))
+			drop-shadow(-11.4246px 9.08049px 4.625px rgba(38, 38, 38, 0.113312))
+			drop-shadow(-8.66327px 6.88572px 2.45312px rgba(38, 38, 38, 0.14));
+	}
+	&__descr {
+		margin: 0;
+		&:not(:last-child) {
+			margin-bottom: 7px;
+		}
+		&:first-of-type {
+			margin-top: 30px;
+		}
+	}
+	&__icon {
+		&-share {
+			margin-left: 5px;
+		}
 	}
 }
