@@ -38,6 +38,7 @@
 		}
 	}
 	&__image {
+		min-width: 315px;
 		filter: drop-shadow(
 				-90.0271px 71.5551px 80px rgba(38, 38, 38, 0.0266875)
 			)
@@ -63,6 +64,51 @@
 	&__icon {
 		&-share {
 			margin-left: 5px;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.choose-hero {
+		&__banner {
+			padding: 50px 60px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.choose-hero {
+		&__title {
+			font-size: 38px;
+		}
+		&__subtitle {
+			margin: 0;
+		}
+		&__banner {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__image {
+			margin-top: 18px;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.choose-hero {
+		&__banner {
+			padding: 25px 30px;
+		}
+		&__image {
+			min-width: 220px;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.choose-hero {
+		&__title {
+			font-size: 36px;
 		}
 	}
 }
