@@ -65,5 +65,8 @@
 			justify-content: flex-start;
 			row-gap: 20px;
 		}
+		&__list {
+			order: 2;
+		}
 	}
 }
