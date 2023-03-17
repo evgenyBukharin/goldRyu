@@ -38,3 +38,19 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.about-vacancy {
+		padding-top: 0;
+		padding-bottom: 125px;
+		&__control {
+			flex-wrap: wrap;
+		}
+		&__container {
+			&-inner {
+				width: 100%;
+				justify-content: space-between;
+			}
+		}
+	}
+}
