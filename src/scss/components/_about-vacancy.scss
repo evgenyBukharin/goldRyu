@@ -1,0 +1,40 @@
+.about-vacancy {
+	padding-top: 75px;
+	padding-bottom: 250px;
+	&__container {
+		&-inner {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__title {
+		margin: 0;
+		margin-bottom: 35px;
+		&-accordion {
+			margin: 0;
+		}
+		&-salary {
+			margin-right: 57px;
+		}
+	}
+	&__subtitle {
+		color: var(--light-blue-color);
+		padding: 10px 30px;
+		width: 100%;
+		background: var(--grey-color);
+		border-radius: 15px;
+		border: 1px solid var(--border-color);
+		margin: 0;
+		&:not(:first-child) {
+			margin-top: 31px;
+		}
+	}
+	&__list {
+		& .accordion:last-child {
+			border-bottom: 0;
+		}
+		& .accordion:first-child {
+			border-bottom: 1px solid var(--darker-blue-color);
+		}
+	}
+}

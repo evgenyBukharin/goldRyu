@@ -1,3 +1,3 @@
 import "./components/docs-anim";
-import "./components/faq-accordion";
+import "./components/accordion";
 import "./components/yandex-map";
