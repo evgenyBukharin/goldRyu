@@ -1,0 +1,136 @@
+.about-hero {
+	padding-bottom: 75px;
+	&__container {
+		&-banner {
+			padding: 50px 15px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: var(--grey-color);
+			border: 1px solid var(--border-color);
+			box-shadow: -63.3888px 84.958px 80px rgba(0, 0, 0, 0.02768),
+				-38.7987px 52.0007px 41.728px rgba(0, 0, 0, 0.04384),
+				-21.6718px 29.046px 19.584px rgba(0, 0, 0, 0.05616),
+				-10.8598px 14.5551px 8.576px rgba(0, 0, 0, 0.07232),
+				-5.21463px 6.989px 3.712px rgba(0, 0, 0, 0.1);
+			border-radius: 15px;
+		}
+		&-text {
+			display: flex;
+			justify-content: space-between;
+		}
+		&-article {
+			max-width: 740px;
+			margin-right: 30px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 70px;
+		}
+	}
+	&__title {
+		margin: 0;
+		text-align: center;
+		&-blue {
+			color: var(--light-blue-color);
+		}
+		&-stat {
+			margin: 0;
+			color: var(--light-blue-color);
+		}
+	}
+	&__subtitle {
+		color: var(--light-blue-color);
+		max-width: 450px;
+		text-align: center;
+		margin: 0;
+		margin-top: 15px;
+		&-stat {
+			margin: 0;
+		}
+	}
+	&__stats {
+		display: flex;
+		margin-top: 100px;
+	}
+	&__stat {
+		&:not(:last-child) {
+			margin-right: 70px;
+		}
+	}
+	&__text {
+		margin: 0;
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+	}
+	&__image {
+		min-width: 480px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.about-hero {
+		&__container {
+			&-text {
+				flex-wrap: wrap;
+				justify-content: center;
+				row-gap: 28px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.about-hero {
+		&__stats {
+			margin-top: 40px;
+			flex-direction: column;
+			row-gap: 16px;
+		}
+		&__stat {
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.about-hero {
+		&__image {
+			min-width: unset;
+		}
+		&__stats {
+			margin-top: 20px;
+		}
+		&__title {
+			&-stat {
+				font-size: 38px;
+			}
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.about-hero {
+		&__image {
+			min-width: unset;
+		}
+		&__title {
+			&-stat {
+				font-size: 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.about-hero {
+		&__title {
+			font-size: 40px;
+			&-stat {
+				font-size: 26px;
+			}
+		}
+	}
+}
