@@ -1,2 +1,60 @@
 .coop-hero {
+	padding-bottom: 150px;
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		&-advantages {
+			& .coop-hero__text {
+				&:not(:first-of-type) {
+					margin-top: 4px;
+				}
+				&:first-of-type {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+	&__image {
+		min-width: 630px;
+		border-radius: 15px;
+		filter: drop-shadow(-63.3888px 84.958px 80px rgba(0, 0, 0, 0.02768))
+			drop-shadow(-38.7987px 52.0007px 41.728px rgba(0, 0, 0, 0.04384))
+			drop-shadow(-21.6718px 29.046px 19.584px rgba(0, 0, 0, 0.05616))
+			drop-shadow(-10.8598px 14.5551px 8.576px rgba(0, 0, 0, 0.07232))
+			drop-shadow(-5.21463px 6.989px 3.712px rgba(0, 0, 0, 0.1));
+	}
+	&__title {
+		margin: 0;
+		&-main {
+			margin-bottom: 30px;
+		}
+		&-blue {
+			color: var(--light-blue-color);
+		}
+	}
+	&__subtitle {
+		margin: 0;
+		margin-top: 15px;
+	}
+	&__text {
+		margin: 0;
+		&:first-child {
+		}
+	}
+	&__button {
+		margin-top: 60px;
+	}
+}
+
+@media (max-width: 1211px) {
+	.coop-hero {
+		&__container {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__button {
+			margin-top: 30px;
+		}
+	}
 }
