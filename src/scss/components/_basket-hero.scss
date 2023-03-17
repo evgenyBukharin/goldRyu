@@ -1,5 +1,5 @@
 .basket-hero {
-	padding-top: 103px;
+	padding-top: 100px;
 	padding-bottom: 150px;
 	&__container {
 		margin-top: 30px;
@@ -23,13 +23,19 @@
 			align-items: flex-end;
 			min-width: 140px;
 		}
+		&-hidden {
+			display: none;
+		}
 	}
 	&__title {
 		margin: 0;
 		&-result {
-			margin: 0;
 			display: flex;
 			justify-content: space-between;
+		}
+		&-hidden {
+			margin-top: 25px;
+			text-align: center;
 		}
 	}
 	&__subtitle {
@@ -81,10 +87,39 @@
 			width: 100%;
 			margin-top: 50px;
 		}
+		&-hidden {
+			margin-top: 30px;
+		}
 	}
 	&__icon {
 		&-delete {
 			margin-left: 9.5px;
+		}
+		&-basket {
+			filter: drop-shadow(
+					-90.0271px 71.5551px 80px rgba(38, 38, 38, 0.0266875)
+				)
+				drop-shadow(
+					-67.6151px 53.7417px 53.9219px rgba(38, 38, 38, 0.0455)
+				)
+				drop-shadow(
+					-49.4415px 39.297px 34.875px rgba(38, 38, 38, 0.0590625)
+				)
+				drop-shadow(
+					-35.1209px 27.9147px 21.6406px rgba(38, 38, 38, 0.07)
+				)
+				drop-shadow(
+					-24.2682px 19.2888px 13px rgba(38, 38, 38, 0.0809375)
+				)
+				drop-shadow(
+					-16.4978px 13.1128px 7.73438px rgba(38, 38, 38, 0.0945)
+				)
+				drop-shadow(
+					-11.4246px 9.08049px 4.625px rgba(38, 38, 38, 0.113312)
+				)
+				drop-shadow(
+					-8.66327px 6.88572px 2.45312px rgba(38, 38, 38, 0.14)
+				);
 		}
 	}
 	&__result {
@@ -116,6 +151,18 @@
 		}
 		&-negative {
 			color: var(--red-color);
+		}
+	}
+
+	// этот класс в секцию если корзина пуста
+	&-empty {
+		& .basket-hero__container-main {
+			display: none;
+		}
+		& .basket-hero__container-hidden {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 	}
 }

@@ -1,8 +1,8 @@
 <section class="basket-hero">
-	<div class="container">
+	<div class="container basket-hero__container-main">
 		<h3 class="basket-hero__title title__h3">Корзина: 2 товара</h3>
 	</div>
-	<div class="container basket-hero__container">
+	<div class="container basket-hero__container basket-hero__container-main">
 		<ul class="basket-hero__list list-reset">
 			<li class="basket-hero__item">
 				<picture>
@@ -102,7 +102,9 @@
 		</ul>
 		<div class="basket-hero__result">
 			<div>
-				<h3 class="basket-hero__title-result title__h3">
+				<h3
+					class="basket-hero__title basket-hero__title-result title__h3"
+				>
 					<span class="basket-hero__title-word">Итого</span>
 					<span class="basket-hero__title-price">247 800 ₽</span>
 				</h3>
@@ -133,5 +135,24 @@
 				</button>
 			</div>
 		</div>
+	</div>
+	<div class="container basket-hero__container-hidden">
+		<img
+			loading="lazy"
+			src="./img/empty-basket.svg"
+			class="image basket-hero__icon-basket"
+			width="169"
+			height="153"
+			alt="Иконка пустой корзины"
+		/>
+		<h3 class="basket-hero__title basket-hero__title-hidden title__h3">
+			В корзине пока ничего нет
+		</h3>
+		<a
+			href="/catalog.html"
+			class="btn-reset button button__secondary basket-hero__button-hidden"
+		>
+			перейти в каталог
+		</a>
 	</div>
 </section>
