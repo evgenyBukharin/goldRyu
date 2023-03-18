@@ -1,0 +1,17 @@
+.main-hero {
+	padding-top: 93px;
+	padding-bottom: 40px;
+	&__container {
+	}
+	&__wrapper {
+	}
+	&__slide {
+		padding: 43px 39px 43px 55px;
+		border: 1px solid var(--border-color);
+		background: var(--grey-color);
+		border-radius: 20px;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+	}
+}

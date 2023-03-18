@@ -1,6 +1,9 @@
 .faq-hero {
 	&__container {
 		padding-bottom: 150px;
+		& .accordion__title {
+			font-weight: 700;
+		}
 	}
 	&__title {
 		margin: 0;

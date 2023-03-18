@@ -38,7 +38,6 @@
 		}
 	}
 	&__image {
-		min-width: 315px;
 		filter: drop-shadow(
 				-90.0271px 71.5551px 80px rgba(38, 38, 38, 0.0266875)
 			)
@@ -71,7 +70,18 @@
 @media (max-width: 1024px) {
 	.choose-hero {
 		&__banner {
-			padding: 50px 60px;
+			padding: 23px 65px 30px 59px;
+		}
+		&__subtitle {
+			margin-top: 32px;
+		}
+		&__image {
+			max-width: 367px;
+		}
+		&__button {
+			&-share {
+				margin-top: 35px;
+			}
 		}
 	}
 }
@@ -79,36 +89,88 @@
 @media (max-width: 768px) {
 	.choose-hero {
 		&__title {
-			font-size: 38px;
-		}
-		&__subtitle {
-			margin: 0;
+			font-size: 28px;
+			line-height: 30px;
 		}
 		&__banner {
+			padding: 23px 30px 30px 44px;
+		}
+		&__subtitle {
+			margin-top: 13px;
+			&-text {
+				font-size: 18px;
+			}
+		}
+		&__image {
+			max-width: 267px;
+		}
+		&__container {
+			&-text {
+				max-width: 281px;
+			}
+		}
+	}
+}
+
+@media (max-width: 594px) {
+	.choose-hero {
+		&__image {
+			max-width: 195px;
+		}
+		&__banner {
+			align-items: center;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.choose-hero {
+		&__title {
+			font-size: 28px;
+			line-height: 30px;
+		}
+		&__subtitle {
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 24px;
+			margin-top: 0;
+			&-text {
+				font-size: 14px;
+				line-height: 19px;
+			}
+		}
+		&__banner {
+			padding: 20px;
+		}
+		&__button {
+			margin-top: 25px;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.choose-hero {
+		&__container {
+			&-text {
+				order: 2;
+			}
+		}
+		&__image {
+			max-width: 225px;
+		}
+		&__banner {
+			padding: 20px;
 			flex-wrap: wrap;
 			justify-content: center;
 		}
-		&__image {
-			margin-top: 18px;
+		&__button {
+			margin-top: 25px;
+			width: 100%;
 		}
-	}
-}
-
-@media (max-width: 425px) {
-	.choose-hero {
-		&__banner {
-			padding: 25px 30px;
-		}
-		&__image {
-			min-width: 220px;
-		}
-	}
-}
-
-@media (max-width: 425px) {
-	.choose-hero {
-		&__title {
-			font-size: 36px;
+		&__subtitle {
+			&-text {
+				margin-top: 10px;
+			}
 		}
 	}
 }

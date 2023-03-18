@@ -7,7 +7,12 @@ accordions.forEach((el) => {
 		const arrow = self.querySelector(".accordion__icon-arrow");
 
 		self.classList.toggle("accordion-open");
-		content.classList.toggle("accordion__content-open");
+		if (self.classList.contains("docs-hero__item")) {
+			content.classList.toggle("accordion__content-open-docs");
+		} else {
+			content.classList.toggle("accordion__content-open");
+		}
+
 		arrow.classList.toggle("accordion__icon-arrow-reversed");
 
 		if (self.classList.contains("accordion-open")) {
