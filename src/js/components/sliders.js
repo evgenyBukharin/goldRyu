@@ -33,9 +33,6 @@ const swiperFeedback = new Swiper(
 			clickable: true,
 			bulletClass: "main-feedback__bullet",
 			bulletActiveClass: "main-feedback__bullet-active",
-			// renderBullet: function (index, className) {
-			// 	return `<span class="swiper-pagintaion-bullet main-feedback__bullet"></span>`;
-			// },
 		},
 		navigation: {
 			nextEl: ".main-feedback__button-next",
