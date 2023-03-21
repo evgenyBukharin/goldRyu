@@ -1,0 +1,26 @@
+.main-banner {
+	margin-top: 115px;
+	padding-bottom: 75px;
+	&__container {
+		background-image: url("../img/main-banner-bg.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 60px 0 90px 110px;
+		border-radius: 20px;
+		border: 1px solid var(--border-color);
+		box-shadow: -63.3888px 84.958px 80px rgba(0, 0, 0, 0.02768),
+			-38.7987px 52.0007px 41.728px rgba(0, 0, 0, 0.04384),
+			-21.6718px 29.046px 19.584px rgba(0, 0, 0, 0.05616),
+			-10.8598px 14.5551px 8.576px rgba(0, 0, 0, 0.07232),
+			-5.21463px 6.989px 3.712px rgba(0, 0, 0, 0.1);
+	}
+	&__title {
+		margin: 0;
+		margin-bottom: 9px;
+	}
+	&__subtitle {
+		color: var(--light-blue-color);
+		margin: 0;
+		margin-bottom: 120px;
+	}
+}

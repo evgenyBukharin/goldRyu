@@ -1,6 +1,6 @@
 .main-feedback {
 	margin-top: 75px;
-	padding-bottom: 75px;
+	padding-bottom: 50px;
 	&__container {
 		max-width: calc(var(--container-width) + 200px);
 		padding-left: 100px;
@@ -34,6 +34,9 @@
 		line-height: 130%;
 		color: var(--darker-blue-color);
 		margin: 0;
+	}
+	&__slider {
+		padding-bottom: 25px;
 	}
 	&__slide {
 		transition: filter 0.3s ease-in-out;
@@ -74,7 +77,7 @@
 		}
 	}
 	&__button {
-		max-height: 13px;
+		max-height: 21px;
 		&-next {
 			margin-left: 25px;
 		}
