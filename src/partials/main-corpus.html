@@ -62,16 +62,35 @@
 		<button class="btn-reset button button__secondary main-corpus__button">
 			подробнее о системах очистки
 		</button>
-		<picture>
-			<source srcset="./img/main-corpus-bg.webp" type="image/webp" />
-			<img
-				loading="lazy"
-				src="./img/main-corpus-bg.png"
-				class="image main-corpus__background"
-				width="668"
-				height="778"
-				alt="Фоновая картинка"
-			/>
-		</picture>
+		<div class="main-corpus__container-background">
+			<picture>
+				<source
+					srcset="./img/main-corpus-bg-1.webp"
+					type="image/webp"
+				/>
+				<img
+					loading="lazy"
+					src="./img/main-corpus-bg-1.png"
+					class="image main-corpus__background main-corpus__background-first"
+					width="468"
+					height="488"
+					alt="Фоновая картинка"
+				/>
+			</picture>
+			<picture>
+				<source
+					srcset="./img/main-corpus-bg-2.webp"
+					type="image/webp"
+				/>
+				<img
+					loading="lazy"
+					src="./img/main-corpus-bg-2.png"
+					class="image main-corpus__background main-corpus__background-second"
+					width="520"
+					height="756"
+					alt="Фоновая картинка"
+				/>
+			</picture>
+		</div>
 	</div>
 </section>

@@ -22,6 +22,13 @@
 				-6.15314px 4.89062px 1.74235px rgba(38, 38, 38, 0.14);
 			border-radius: 14.2051px;
 		}
+		&-background {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			min-width: 688px;
+			min-height: 778px;
+		}
 	}
 	&__title {
 		max-width: 600px;
@@ -59,8 +66,39 @@
 		}
 	}
 	&__background {
-		position: absolute;
-		bottom: 0;
-		right: 0;
+		&-first {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		&-second {
+			position: absolute;
+			top: 0;
+			right: 0;
+			filter: drop-shadow(
+					-90.0271px 71.5551px 80px rgba(38, 38, 38, 0.0266875)
+				)
+				drop-shadow(
+					-67.6151px 53.7417px 53.9219px rgba(38, 38, 38, 0.0455)
+				)
+				drop-shadow(
+					-49.4415px 39.297px 34.875px rgba(38, 38, 38, 0.0590625)
+				)
+				drop-shadow(
+					-35.1209px 27.9147px 21.6406px rgba(38, 38, 38, 0.07)
+				)
+				drop-shadow(
+					-24.2682px 19.2888px 13px rgba(38, 38, 38, 0.0809375)
+				)
+				drop-shadow(
+					-16.4978px 13.1128px 7.73438px rgba(38, 38, 38, 0.0945)
+				)
+				drop-shadow(
+					-11.4246px 9.08049px 4.625px rgba(38, 38, 38, 0.113312)
+				)
+				drop-shadow(
+					-8.66327px 6.88572px 2.45312px rgba(38, 38, 38, 0.14)
+				);
+		}
 	}
 }
