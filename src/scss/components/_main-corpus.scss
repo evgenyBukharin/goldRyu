@@ -1,0 +1,66 @@
+.main-corpus {
+	padding-bottom: 75px;
+	&__container {
+		position: relative;
+		min-height: 780px;
+		&-icon {
+			margin-right: 30px;
+			width: 70px;
+			height: 70px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: var(--dark-blue-color);
+			box-shadow: -63.9423px 50.8225px 56.8205px
+					rgba(38, 38, 38, 0.0266875),
+				-48.0241px 38.1704px 38.2984px rgba(38, 38, 38, 0.0455),
+				-35.1161px 27.9109px 24.7702px rgba(38, 38, 38, 0.0590625),
+				-24.9449px 19.8266px 15.3704px rgba(38, 38, 38, 0.07),
+				-17.2366px 13.7px 9.23333px rgba(38, 38, 38, 0.0809375),
+				-11.7177px 9.31342px 5.49339px rgba(38, 38, 38, 0.0945),
+				-8.11442px 6.44948px 3.28494px rgba(38, 38, 38, 0.113312),
+				-6.15314px 4.89062px 1.74235px rgba(38, 38, 38, 0.14);
+			border-radius: 14.2051px;
+		}
+	}
+	&__title {
+		max-width: 600px;
+		font-weight: 600;
+		font-size: 45px;
+		line-height: 122%;
+		margin: 0;
+		margin-bottom: 21px;
+		&-blue {
+			color: var(--light-blue-color);
+		}
+	}
+	&__subtitle {
+		max-width: 789px;
+		margin: 0;
+		color: var(--light-blue-color);
+		&:not(:last-of-type) {
+			margin-bottom: 10px;
+		}
+		&:last-of-type {
+			margin-bottom: 50px;
+		}
+		&-item {
+			margin: 0;
+		}
+	}
+	&__list {
+		margin-bottom: 60px;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+	&__background {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+}
