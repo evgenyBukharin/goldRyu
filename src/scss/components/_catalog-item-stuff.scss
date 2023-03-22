@@ -1,0 +1,19 @@
+.catalog-item-stuff {
+	margin-top: 40px;
+	padding-bottom: 40px;
+	&__container {
+	}
+	&__title {
+		margin: 0;
+		margin-bottom: 30px;
+	}
+	& .catalog-hero__item-category {
+		grid-column: 3 span;
+		&::after {
+			display: none;
+		}
+	}
+	& .catalog-hero__title-category {
+		color: var(--dark-blue-color);
+	}
+}
