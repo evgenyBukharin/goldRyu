@@ -6,7 +6,6 @@ const swiperHero = new Swiper(document.querySelector(".main-hero__slider"), {
 	resistanceRatio: 0,
 	speed: 400,
 	effect: "creative",
-
 	creativeEffect: {
 		prev: {
 			translate: [0, 0, -100],
@@ -90,3 +89,27 @@ const sliderImages = new Swiper(
 		// },
 	}
 );
+
+const quizSlider = new Swiper(".quiz__slider", {
+	slidesPerView: 1,
+	speed: 500,
+	allowSlideNext: false,
+	allowSlidePrev: false,
+});
+const startTestBtn = document.getElementById("startTestBtn");
+if (startTestBtn !== null) {
+	startTestBtn.addEventListener("click", () => {
+		quizSlider.allowSlideNext = true;
+		quizSlider.slideNext();
+		quizSlider.allowSlideNext = false;
+	});
+}
+
+const quizInnerSlider = new Swiper(".quiz__slider-inner", {
+	slidesPerView: 1,
+	speed: 500,
+	navigation: {
+		nextEl: ".quiz__button-next",
+		prevEl: ".quiz__button-prev",
+	},
+});

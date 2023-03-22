@@ -15,30 +15,11 @@ export default class Tabs {
 				".catalog-item-tabs__panel"
 			);
 		} else {
-			console.error("Селектор data-tabs не существует!");
 			return;
 		}
 
-		this.check();
 		this.init();
 		this.events();
-	}
-
-	check() {
-		if (
-			document.querySelectorAll(`[data-tabs="${this.selector}"]`).length >
-			1
-		) {
-			console.error(
-				"Количество элементов с одинаковым data-tabs больше одного!"
-			);
-			return;
-		}
-
-		if (this.tabsBtns.length !== this.tabsPanels.length) {
-			console.error("Количество кнопок и элементов табов не совпадает!");
-			return;
-		}
 	}
 
 	init() {

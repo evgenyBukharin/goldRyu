@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+	@include('partials/head.html')
+	<body class="page__body quiz__body">
+		<div class="site-container">
+			<main class="main">
+				<section class="quiz">
+					<div class="container quiz__container">
+						<div class="quiz__slider-container">
+							<a href="./" class="btn-reset quiz__button-close">
+								<img
+									loading="lazy"
+									src="./img/close-icon.svg"
+									class="image quiz__icon-close"
+									width="15"
+									height="15"
+									alt="Иконка закрыть"
+								/>
+							</a>
+							<div class="swiper quiz__slider">
+								<div class="swiper-wrapper quiz__wrapper">
+									<div class="swiper-slide quiz__slide">
+										<img
+											loading="lazy"
+											src="./img/logo480.svg"
+											class="image quiz__logo quiz__logo-first"
+											width="157"
+											height="43"
+											alt="Логотип"
+										/>
+										<h3
+											class="quiz__title quiz__title-main title__h3"
+										>
+											Подберем систему очистки под ваши
+											критерии
+										</h3>
+										<p
+											class="quiz__text quiz__text-main title__text"
+										>
+											Ответьте на 7 вопросов <br />
+											и мы подберем лучший вариант для Вас
+										</p>
+										<button
+											class="btn-reset button button__primary quiz__button"
+											id="startTestBtn"
+										>
+											пройти тест
+										</button>
+									</div>
+									<div class="swiper-slide quiz__slide">
+										<div class="quiz__header">
+											<img
+												loading="lazy"
+												src="./img/logo480.svg"
+												class="image quiz__logo"
+												width="111"
+												height="31"
+												alt="Логотип"
+											/>
+											<p
+												class="quiz__text quiz__text-header title__text"
+											>
+												Подберем систему очистки стоков
+												под ваши критерии
+											</p>
+										</div>
+										<div class="swiper quiz__slider-inner">
+											<div class="swiper-wrapper">
+												<div
+													class="swiper-slide quiz__slide-inner"
+												>
+													<h3
+														class="quiz__title quiz__title-inner title__h3"
+													>
+														Количество постоянно
+														проживающих
+													</h3>
+													<ul
+														class="quiz__list-count list-reset"
+													>
+														<li
+															class="quiz__item-count"
+														>
+															<label
+																class="quiz__label"
+																for="count1"
+															>
+																<input
+																	type="radio"
+																	name="count"
+																	id="count1"
+																	class="quiz__input-radio"
+																	value="1-6"
+																/>
+																<span
+																	class="quiz__checkmark"
+																></span>
+																<span
+																	class="quiz__text-inner"
+																	>от 1 до 6
+																	человек</span
+																>
+															</label>
+														</li>
+														<li
+															class="quiz__item-count"
+														>
+															<label
+																class="quiz__label"
+																for="count2"
+															>
+																<input
+																	type="radio"
+																	name="count"
+																	id="count2"
+																	class="quiz__input-radio"
+																	value="3-8"
+																/>
+																<span
+																	class="quiz__checkmark"
+																></span>
+																<span
+																	class="quiz__text-inner"
+																	>от 3 до 8
+																	человек</span
+																>
+															</label>
+														</li>
+														<li
+															class="quiz__item-count"
+														>
+															<label
+																class="quiz__label"
+																for="count3"
+															>
+																<input
+																	type="radio"
+																	name="count"
+																	id="count3"
+																	class="quiz__input-radio"
+																	value="8+"
+																/>
+																<span
+																	class="quiz__checkmark"
+																></span>
+																<span
+																	class="quiz__text-inner"
+																	>более 8
+																	человек</span
+																>
+															</label>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>
