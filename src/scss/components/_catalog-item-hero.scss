@@ -1,0 +1,93 @@
+.catalog-item-hero {
+	padding-bottom: 40px;
+
+	&__container {
+		display: flex;
+		margin-bottom: 30px;
+	}
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+		padding: 43px 101px 43px 48px;
+		background: var(--white-color);
+		border: 1px solid var(--border-color);
+		box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.1);
+		border-radius: 20px;
+		max-width: 1045px;
+	}
+	&__slider {
+		& .swiper-container {
+			width: 100%;
+			height: 100%;
+		}
+		&-thumbs {
+			height: 350px;
+			& .swiper-slide {
+				cursor: pointer;
+			}
+		}
+	}
+	&__slide {
+		display: flex;
+		justify-content: center;
+	}
+	&__icon {
+		filter: drop-shadow(
+				-90.0271px 71.5551px 80px rgba(38, 38, 38, 0.0266875)
+			)
+			drop-shadow(-67.6151px 53.7417px 53.9219px rgba(38, 38, 38, 0.0455))
+			drop-shadow(
+				-49.4415px 39.297px 34.875px rgba(38, 38, 38, 0.0590625)
+			)
+			drop-shadow(-35.1209px 27.9147px 21.6406px rgba(38, 38, 38, 0.07))
+			drop-shadow(-24.2682px 19.2888px 13px rgba(38, 38, 38, 0.0809375))
+			drop-shadow(-16.4978px 13.1128px 7.73438px rgba(38, 38, 38, 0.0945))
+			drop-shadow(-11.4246px 9.08049px 4.625px rgba(38, 38, 38, 0.113312))
+			drop-shadow(-8.66327px 6.88572px 2.45312px rgba(38, 38, 38, 0.14));
+		&-arrow {
+			&-reversed {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	&__col {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-width: 142px;
+		margin-right: 100px;
+	}
+	&__button {
+		margin-bottom: 35px;
+		&:last-child {
+			margin-top: 35px;
+			margin-bottom: 0;
+		}
+	}
+	&__list {
+		margin-left: 30px;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+	&__text {
+		margin-left: 20px;
+		font-family: "Nunito Sans", sans-serif;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 22px;
+		color: var(--black-color);
+	}
+	& .catalog-hero__price {
+		font-size: 28px;
+		line-height: 30px;
+	}
+	& .catalog-hero__container-price {
+		margin-bottom: 14px;
+	}
+}

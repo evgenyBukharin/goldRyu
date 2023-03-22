@@ -1,5 +1,5 @@
-import Swiper, { Pagination, EffectCreative, Navigation } from "swiper";
-Swiper.use([Pagination, EffectCreative, Navigation]);
+import Swiper, { Pagination, EffectCreative, Navigation, Thumbs } from "swiper";
+Swiper.use([Pagination, EffectCreative, Navigation, Thumbs]);
 const swiperHero = new Swiper(document.querySelector(".main-hero__slider"), {
 	slidesPerView: "auto",
 	spaceBetween: 40,
@@ -41,5 +41,52 @@ const swiperFeedback = new Swiper(
 			nextEl: ".main-feedback__button-next",
 			prevEl: ".main-feedback__button-prev",
 		},
+	}
+);
+
+const sliderThumbs = new Swiper(
+	".catalog-item-hero__slider-thumbs .swiper-container",
+	{
+		direction: "vertical",
+		slidesPerView: 3,
+		spaceBetween: 40,
+		navigation: {
+			nextEl: ".catalog-item-hero__button-next",
+			prevEl: ".catalog-item-hero__button-prev",
+		},
+		freeMode: true,
+		// breakpoints: {
+		// 	0: {
+		// 		direction: "horizontal",
+		// 	},
+		// 	768: {
+		// 		direction: "vertical",
+		// 	},
+		// },
+	}
+);
+
+const sliderImages = new Swiper(
+	".catalog-item-hero__slider-images .swiper-container",
+	{
+		slidesPerView: 1,
+		spaceBetween: 30,
+		mousewheel: true,
+		navigation: {
+			nextEl: ".catalog-item-hero__button-next",
+			prevEl: ".catalog-item-hero__button-prev",
+		},
+		grabCursor: true,
+		thumbs: {
+			swiper: sliderThumbs,
+		},
+		// breakpoints: {
+		// 	0: {
+		// 		direction: "horizontal",
+		// 	},
+		// 	768: {
+		// 		direction: "vertical",
+		// 	},
+		// },
 	}
 );
