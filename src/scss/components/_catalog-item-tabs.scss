@@ -41,19 +41,13 @@
 	}
 	&__content {
 		margin-top: 50px;
-		position: relative;
 		margin-bottom: 80px;
-		min-height: 270px;
 	}
 	&__panel {
 		width: 100%;
-		position: absolute;
-		opacity: 0;
-		visibility: hidden;
-		transition: opacity 0.3s ease, visibility 0.3s ease;
+		display: none;
 		&-active {
-			opacity: 1;
-			visibility: visible;
+			display: block;
 		}
 	}
 	&__icon {

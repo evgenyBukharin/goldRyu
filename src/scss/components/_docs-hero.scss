@@ -25,6 +25,7 @@
 		padding: 13px 73px;
 		border-radius: 15px;
 		background: linear-gradient(180deg, #fffbf5 0%, #f5f1eb 100%);
+		justify-content: center;
 	}
 	&__content {
 		display: flex;
@@ -32,6 +33,7 @@
 	}
 	&__title {
 		color: var(--light-blue-color);
+		font-weight: 600;
 	}
 	&__docs {
 		& .docs-hero__doc:not(:last-of-type) {
