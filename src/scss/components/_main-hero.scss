@@ -2,6 +2,12 @@
 	padding-top: 93px;
 	&__container {
 		padding-bottom: 69px;
+		&-pagination {
+			width: 100%;
+			margin-top: 62px;
+			display: flex;
+			justify-content: center;
+		}
 	}
 	&__slider {
 		background: var(--grey-color);
@@ -25,11 +31,8 @@
 		justify-content: space-between;
 	}
 	&__pagination {
-		position: absolute;
-		top: unset !important;
-		bottom: 62px !important;
-		left: 50% !important;
-		transform: translateX(-50%);
+		display: block;
+		position: relative;
 		max-width: 408px;
 		background-color: var(--darker-grafite-color);
 		&::before,
