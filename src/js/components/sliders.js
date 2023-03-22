@@ -6,6 +6,7 @@ const swiperHero = new Swiper(document.querySelector(".main-hero__slider"), {
 	resistanceRatio: 0,
 	speed: 400,
 	effect: "creative",
+
 	creativeEffect: {
 		prev: {
 			translate: [0, 0, -100],
@@ -27,6 +28,8 @@ const swiperFeedback = new Swiper(
 		spaceBetween: 30,
 		speed: 400,
 		resistanceRatio: 1,
+		watchSlidesProgress: true,
+		slideVisibleClass: "main-feedback__slide-visible",
 		pagination: {
 			el: ".main-feedback__pagination",
 			type: "bullets",
