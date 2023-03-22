@@ -24,6 +24,14 @@
 			align-items: center;
 			min-width: fit-content;
 		}
+		&-category {
+			&:not(:first-of-type) {
+				margin-top: 50px;
+			}
+			&-hidden {
+				display: none;
+			}
+		}
 	}
 	&__link {
 		color: var(--light-blue-color);
@@ -42,9 +50,6 @@
 			margin: 0;
 			margin-bottom: 20px;
 			color: var(--light-blue-color);
-			&:not(:first-of-type) {
-				margin-top: 50px;
-			}
 		}
 		&-product {
 			margin: 0;
