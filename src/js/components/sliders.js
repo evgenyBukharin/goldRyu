@@ -107,9 +107,23 @@ if (startTestBtn !== null) {
 
 const quizInnerSlider = new Swiper(".quiz__slider-inner", {
 	slidesPerView: 1,
+	spaceBetween: 15,
 	speed: 500,
 	navigation: {
+		disabledClass: "none",
 		nextEl: ".quiz__button-next",
 		prevEl: ".quiz__button-prev",
 	},
+	pagination: {
+		el: ".quiz__pagination",
+		type: "progressbar",
+	},
+});
+quizSlider.activeIndex = 1;
+quizInnerSlider.activeIndex = 2;
+const quizInnerCurrent = document.querySelector(".quiz__title-current");
+const quizInnerAll = document.querySelector(".quiz__title-all");
+quizInnerAll.innerHTML = quizInnerSlider.slides.length;
+quizInnerSlider.on("activeIndexChange", () => {
+	quizInnerCurrent.innerHTML = quizInnerSlider.activeIndex + 1;
 });
