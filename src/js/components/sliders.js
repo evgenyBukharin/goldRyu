@@ -104,13 +104,11 @@ if (startTestBtn !== null) {
 		quizSlider.allowSlideNext = false;
 	});
 }
-
 const quizInnerSlider = new Swiper(".quiz__slider-inner", {
 	slidesPerView: 1,
 	spaceBetween: 15,
 	speed: 500,
 	navigation: {
-		disabledClass: "none",
 		nextEl: ".quiz__button-next",
 		prevEl: ".quiz__button-prev",
 	},
@@ -119,11 +117,23 @@ const quizInnerSlider = new Swiper(".quiz__slider-inner", {
 		type: "progressbar",
 	},
 });
-quizSlider.activeIndex = 1;
-quizInnerSlider.activeIndex = 2;
+
 const quizInnerCurrent = document.querySelector(".quiz__title-current");
 const quizInnerAll = document.querySelector(".quiz__title-all");
-quizInnerAll.innerHTML = quizInnerSlider.slides.length;
+if (quizInnerAll !== null) {
+	quizInnerAll.innerHTML = quizInnerSlider.slides.length;
+}
 quizInnerSlider.on("activeIndexChange", () => {
 	quizInnerCurrent.innerHTML = quizInnerSlider.activeIndex + 1;
+});
+quizInnerSlider.on("reachEnd", () => {
+	const nextBtn = document.querySelector(".quiz__button-next");
+	setTimeout(() => {
+		nextBtn.removeAttribute("disabled");
+		nextBtn.addEventListener("click", () => {
+			quizSlider.allowSlideNext = true;
+			quizSlider.slideNext();
+			quizSlider.allowSlideNext = false;
+		});
+	}, 0);
 });

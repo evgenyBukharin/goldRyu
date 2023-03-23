@@ -21,6 +21,11 @@
 			display: flex;
 			align-items: center;
 		}
+		&-text-inputs {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 	&__slider {
 		&-container {
@@ -51,7 +56,9 @@
 		padding: 58px 110px 81px;
 		box-sizing: border-box;
 		z-index: 10;
-		&-inner {
+		&-last {
+			background: url("../img/last-slide-bg.png");
+			background-size: cover;
 		}
 	}
 	&__logo {
@@ -76,6 +83,10 @@
 		}
 		&-quantity {
 			margin-bottom: 20px;
+		}
+		&-last {
+			max-width: 430px;
+			margin-bottom: 15px;
 		}
 	}
 	&__text {
@@ -123,6 +134,9 @@
 		display: flex;
 		align-items: flex-start;
 		margin-bottom: 60px;
+		&-last {
+			margin-bottom: 30px;
+		}
 	}
 	&__input {
 		&-radio {
@@ -143,6 +157,58 @@
 				&::after {
 					opacity: 1;
 				}
+			}
+		}
+		&-text {
+			background: var(--white-color);
+			position: relative;
+			display: block;
+			z-index: 10;
+			background: var(--white-color);
+			border: 1px solid var(--dark-blue-color);
+			border-radius: 10px;
+			padding: 9px 20px;
+			min-width: 410px;
+			font-family: "Nunito Sans", sans-serif;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 22px;
+			outline: none;
+			transition: border 0.3s ease;
+			&::placeholder {
+				color: var(--darker-grafite-color);
+				font-family: "Nunito Sans", sans-serif;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 22px;
+			}
+			&:invalid {
+				border: 1px solid var(--red-color);
+			}
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+			&:last-child {
+				margin-bottom: 42px;
+			}
+		}
+		&-tab {
+			max-width: 100%;
+			width: 100%;
+			margin-top: 10px;
+			border: 1px solid var(--border-color);
+			padding-left: 50px;
+			&-tg {
+				background: url("../img/tg-icon.svg") var(--white-color)
+					no-repeat 20px;
+			}
+			&-mail {
+				background: url("../img/mail-icon.svg") var(--white-color)
+					no-repeat 20px;
+			}
+			&-wa {
+				background: url("../img/whatsup-icon.svg") var(--white-color)
+					no-repeat 20px;
 			}
 		}
 	}
@@ -181,10 +247,63 @@
 		&-gift {
 			column-gap: 15px;
 		}
+		&-tabs {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	&__content {
+		max-width: 440px;
+	}
+	&__btn {
+		position: relative;
+		padding: 10px 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: var(--darker-grafite-color);
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		background: var(--white-color);
+		border: 1px solid var(--border-color);
+		border-radius: 10px;
+		transition: background 0.3s ease, color 0.3s ease;
+		box-sizing: border-box;
+		height: 40px;
+		&-active {
+			background: var(--dark-blue-color);
+			color: var(--white-color);
+			&::after {
+				display: none;
+			}
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 10px;
+			border: 4px solid var(--light-blue-color);
+			transition: opacity 0.3s ease;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+		&:hover {
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+	&__panel {
+		display: none;
+		&-active {
+			display: block;
+			margin-bottom: 66px;
+		}
 	}
 	&__item {
-		&-count {
-		}
 		&-quantity {
 			border: 2px solid var(--light-blue-color);
 			border-radius: 10px;
@@ -283,5 +402,11 @@
 		&-list {
 			margin-right: 18px;
 		}
+		&-tabs {
+			margin-right: 10px;
+		}
+	}
+	&__tabs {
+		max-width: 440px;
 	}
 }

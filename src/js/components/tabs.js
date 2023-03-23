@@ -1,18 +1,15 @@
 export default class Tabs {
-	constructor(selector, options) {
-		let defaultOptions = {
-			isChanged: () => {},
-		};
-		this.options = Object.assign(defaultOptions, options);
+	constructor(selector, innerElems) {
 		this.selector = selector;
+		this.innerElements = innerElems;
 		this.tabs = document.querySelector(`[data-tabs="${selector}"]`);
 		if (this.tabs) {
-			this.tabList = this.tabs.querySelector(".catalog-item-tabs__list");
+			this.tabList = this.tabs.querySelector("." + innerElems.list);
 			this.tabsBtns = this.tabList.querySelectorAll(
-				".catalog-item-tabs__btn"
+				"." + innerElems.button
 			);
 			this.tabsPanels = this.tabs.querySelectorAll(
-				".catalog-item-tabs__panel"
+				"." + innerElems.panel
 			);
 		} else {
 			return;
@@ -29,20 +26,20 @@ export default class Tabs {
 			el.setAttribute("role", "tab");
 			el.setAttribute("tabindex", "-1");
 			el.setAttribute("id", `${this.selector}${i + 1}`);
-			el.classList.remove("catalog-item-tabs__btn-active");
+			el.classList.remove(this.innerElements.button + "-active");
 		});
 
 		this.tabsPanels.forEach((el, i) => {
 			el.setAttribute("role", "tabpanel");
 			el.setAttribute("tabindex", "-1");
 			el.setAttribute("aria-labelledby", this.tabsBtns[i].id);
-			el.classList.remove("catalog-item-tabs__panel-active");
+			el.classList.remove(this.innerElements.panel + "-active");
 		});
 
-		this.tabsBtns[1].classList.add("catalog-item-tabs__btn-active");
+		this.tabsBtns[1].classList.add(this.innerElements.button + "-active");
 		this.tabsBtns[1].removeAttribute("tabindex");
 		this.tabsBtns[1].setAttribute("aria-selected", "true");
-		this.tabsPanels[1].classList.add("catalog-item-tabs__panel-active");
+		this.tabsPanels[1].classList.add(this.innerElements.panel + "-active");
 	}
 
 	events() {
@@ -96,17 +93,29 @@ export default class Tabs {
 		let oldIndex = Array.prototype.indexOf.call(this.tabsBtns, oldTab);
 
 		this.tabsPanels[oldIndex].classList.remove(
-			"catalog-item-tabs__panel-active"
+			this.innerElements.panel + "-active"
 		);
-		this.tabsPanels[index].classList.add("catalog-item-tabs__panel-active");
+		this.tabsPanels[index].classList.add(
+			this.innerElements.panel + "-active"
+		);
 
 		this.tabsBtns[oldIndex].classList.remove(
-			"catalog-item-tabs__btn-active"
+			this.innerElements.button + "-active"
 		);
-		this.tabsBtns[index].classList.add("catalog-item-tabs__btn-active");
-
-		this.options.isChanged(this);
+		this.tabsBtns[index].classList.add(
+			this.innerElements.button + "-active"
+		);
 	}
 }
 
-const tabs = new Tabs("tab");
+const tabs = new Tabs("tab", {
+	list: "catalog-item-tabs__list",
+	button: "catalog-item-tabs__btn",
+	panel: "catalog-item-tabs__panel",
+});
+
+const quizTabs = new Tabs("quizTab", {
+	list: "quiz__list-tabs",
+	button: "quiz__btn",
+	panel: "quiz__panel",
+});
