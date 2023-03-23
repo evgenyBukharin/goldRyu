@@ -409,4 +409,12 @@
 	&__tabs {
 		max-width: 440px;
 	}
+	&__radio {
+		&-design {
+			&::before {
+				width: 16px;
+				height: 16px;
+			}
+		}
+	}
 }

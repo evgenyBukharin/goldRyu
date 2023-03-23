@@ -1,5 +1,11 @@
-import Swiper, { Pagination, EffectCreative, Navigation, Thumbs } from "swiper";
-Swiper.use([Pagination, EffectCreative, Navigation, Thumbs]);
+import Swiper, {
+	Pagination,
+	EffectCreative,
+	Navigation,
+	Thumbs,
+	Manipulation,
+} from "swiper";
+Swiper.use([Pagination, EffectCreative, Navigation, Thumbs, Manipulation]);
 const swiperHero = new Swiper(document.querySelector(".main-hero__slider"), {
 	slidesPerView: "auto",
 	spaceBetween: 40,
@@ -136,4 +142,30 @@ quizInnerSlider.on("reachEnd", () => {
 			quizSlider.allowSlideNext = false;
 		});
 	}, 0);
+});
+
+const designSlider = new Swiper(".main-design__slider", {
+	slidesPerView: 1,
+	speed: 500,
+});
+
+const designNextBtn = document.querySelector(".main-design__button-next");
+designNextBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+	const designForm = document.querySelector(".main-design__form");
+	const checkedInputs = designForm.querySelectorAll(
+		".main-design__label-active .main-design__input"
+	);
+	if (checkedInputs !== null) {
+		const formData = {};
+		checkedInputs.forEach((input) => {
+			formData[input.name] = input.value;
+		});
+		if (formData.color == "под заказ") {
+			designSlider.removeSlide(1);
+			designSlider.slideNext();
+		} else {
+			designSlider.slideNext();
+		}
+	}
 });
