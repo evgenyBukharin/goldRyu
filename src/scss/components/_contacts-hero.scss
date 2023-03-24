@@ -55,15 +55,28 @@
 			drop-shadow(-10.8598px 14.5551px 8.576px rgba(0, 0, 0, 0.07232))
 			drop-shadow(-5.21463px 6.989px 3.712px rgba(0, 0, 0, 0.1));
 		border-radius: 15px;
+		margin-left: 55px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.contacts-hero {
+		&__map {
+			max-width: 540px;
+		}
 	}
 }
 
 @media (max-width: 768px) {
 	.contacts-hero {
+		&__map {
+			max-width: 100%;
+			margin-left: 0;
+		}
 		&__container {
 			flex-wrap: wrap;
 			justify-content: flex-start;
-			row-gap: 20px;
+			row-gap: 30px;
 		}
 		&__list {
 			order: 2;

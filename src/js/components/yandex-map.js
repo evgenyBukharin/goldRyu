@@ -1,8 +1,21 @@
-// ymaps.ready(init);
+ymaps.ready(init);
 
-// function init() {
-// 	myMap = new ymaps.Map("contacts-map", {
-// 		center: [55.17335456952944, 61.3061735],
-// 		zoom: 17,
-// 	});
-// }
+function init() {
+	myMap = new ymaps.Map("contacts-map", {
+		center: [55.05386257036589, 61.45853671216136],
+		zoom: 9,
+	});
+	const geoObject1 = new ymaps.GeoObject({
+		geometry: {
+			type: "Point",
+			coordinates: [55.154938569541265, 61.31335099999995],
+		},
+	});
+	const geoObject2 = new ymaps.GeoObject({
+		geometry: {
+			type: "Point",
+			coordinates: [54.86839356980941, 61.40452099999999],
+		},
+	});
+	myMap.geoObjects.add(geoObject1).add(geoObject2);
+}
