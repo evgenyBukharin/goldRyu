@@ -1,10 +1,16 @@
 ymaps.ready(init);
-
 function init() {
-	myMap = new ymaps.Map("contacts-map", {
-		center: [55.05386257036589, 61.45853671216136],
-		zoom: 9,
-	});
+	if (document.getElementById("contacts-map") !== null) {
+		myMap = new ymaps.Map("contacts-map", {
+			center: [55.05386257036589, 61.45853671216136],
+			zoom: 9,
+		});
+	} else {
+		myMap = new ymaps.Map("main-map", {
+			center: [55.05386257036589, 61.45853671216136],
+			zoom: 9,
+		});
+	}
 	const geoObject1 = new ymaps.GeoObject({
 		geometry: {
 			type: "Point",

@@ -1,6 +1,6 @@
 import "./components/accordion";
 import "./components/radio-switch";
 import "./components/sliders";
-import "./components/yandex-map";
+import "./components/maps";
 import "./components/tabs";
 import "./components/categories";
