@@ -1,0 +1,11 @@
+.cabinet-hero {
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 30px;
+	}
+	&__title {
+		margin: 0;
+		margin-bottom: 30px;
+	}
+}
