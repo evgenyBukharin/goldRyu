@@ -147,25 +147,74 @@ quizInnerSlider.on("reachEnd", () => {
 const designSlider = new Swiper(".main-design__slider", {
 	slidesPerView: 1,
 	speed: 500,
+	allowSlideNext: false,
+	allowSlidePrev: false,
 });
 
+// designSlider.activeIndex = 1;
+const slideToHide = document.querySelector(".main-design__slide-tohide");
 const designNextBtn = document.querySelector(".main-design__button-next");
-designNextBtn.addEventListener("click", (e) => {
-	e.preventDefault();
-	const designForm = document.querySelector(".main-design__form");
-	const checkedInputs = designForm.querySelectorAll(
-		".main-design__label-active .main-design__input"
-	);
-	if (checkedInputs !== null) {
-		const formData = {};
-		checkedInputs.forEach((input) => {
-			formData[input.name] = input.value;
-		});
-		if (formData.color == "под заказ") {
-			designSlider.removeSlide(1);
+if (designNextBtn !== null) {
+	designNextBtn.addEventListener("click", (e) => {
+		e.preventDefault();
+		const designForm = document.querySelector(".main-design__form");
+		const checkedInputs = designForm.querySelectorAll(
+			".main-design__label-active .main-design__input"
+		);
+		const checkedInputImagePath = designForm
+			.querySelector(".main-design__label-active .main-design__image")
+			.getAttribute("src");
+
+		if (checkedInputs !== null) {
+			const formData = {
+				img: checkedInputImagePath,
+			};
+			checkedInputs.forEach((input) => {
+				formData[input.name] = input.value;
+			});
+
+			// смена слайда
+			if (formData.color == "под заказ") {
+				slideToHide.style.display = "none";
+			}
+
+			// Применение собранных данных с формы
+			const importedImages = document.querySelectorAll(
+				".main-degign__image-imported"
+			);
+			importedImages.forEach((importedImage) => {
+				importedImage.setAttribute("src", formData.img);
+			});
+
+			const importedShapes = document.querySelectorAll(
+				".main-design__text-shape"
+			);
+			importedShapes.forEach((importedShape) => {
+				importedShape.innerHTML = `Форма: ${formData.shape}`;
+			});
+
+			const importedColors = document.querySelectorAll(
+				".main-design__text-color"
+			);
+			importedColors.forEach((importedColor) => {
+				importedColor.innerHTML = `Цвет: ${formData.color}`;
+			});
+
+			designSlider.allowSlideNext = true;
 			designSlider.slideNext();
-		} else {
-			designSlider.slideNext();
+			designSlider.allowSlideNext = false;
 		}
-	}
-});
+	});
+}
+
+const designPrevBtns = document.querySelectorAll(".main-design__button-prev");
+if (designPrevBtns !== null) {
+	designPrevBtns.forEach((designPrevBtn) => {
+		designPrevBtn.addEventListener("click", () => {
+			designSlider.allowSlidePrev = true;
+			designSlider.slidePrev();
+			designSlider.allowSlidePrev = false;
+			slideToHide.style.display = "block";
+		});
+	});
+}

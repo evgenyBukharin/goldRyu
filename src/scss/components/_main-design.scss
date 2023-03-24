@@ -7,6 +7,10 @@
 		align-items: center;
 		padding-left: 110px;
 		padding-right: 110px;
+		&-btns {
+			position: relative;
+			display: flex;
+		}
 		&-row {
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
@@ -20,6 +24,29 @@
 			display: flex;
 			justify-content: flex-end;
 			margin-top: 45px;
+		}
+		&-flex {
+			display: flex;
+			margin-bottom: 88px;
+		}
+		&-image {
+			padding: 5px 15px;
+			border: 1px solid var(--border-color);
+			border-radius: 10px;
+			background: var(--white-color);
+			margin-right: 30px;
+			position: relative;
+		}
+		&-descr {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+			max-width: 411px;
+		}
+		&-order {
+			display: flex;
+			align-items: flex-end;
 		}
 	}
 	&__title {
@@ -45,8 +72,6 @@
 			margin-bottom: 10px;
 			grid-column: 12 span;
 		}
-	}
-	&__frames {
 	}
 	&__form {
 		display: flex;
@@ -136,6 +161,19 @@
 		position: absolute;
 		left: 0;
 		bottom: -24px;
+		&-result {
+			margin: 0;
+			&:not(:last-child) {
+				margin-bottom: 13px;
+			}
+		}
+		&-info {
+			color: var(--light-blue-color);
+			margin: 0;
+			margin-bottom: 20px;
+			font-weight: 700;
+			line-height: 25px;
+		}
 	}
 	&__slider {
 		margin: 0;
@@ -156,5 +194,20 @@
 		border-radius: 15px;
 		padding: 50px 110px;
 		box-sizing: border-box;
+	}
+	& .catalog-hero__price {
+		font-size: 28px;
+		line-height: 30px;
+		color: var(--dark-blue-color);
+		&-real {
+			font-weight: 600;
+		}
+	}
+	&__button {
+		margin-right: 20px;
+		&-submit {
+			min-height: 100%;
+			margin-left: 15px;
+		}
 	}
 }
