@@ -5,11 +5,13 @@ function init() {
 			center: [55.05386257036589, 61.45853671216136],
 			zoom: 9,
 		});
-	} else {
+	} else if (document.getElementById("main-map") !== null) {
 		myMap = new ymaps.Map("main-map", {
 			center: [55.05386257036589, 61.45853671216136],
 			zoom: 9,
 		});
+	} else {
+		return;
 	}
 	const geoObject1 = new ymaps.GeoObject({
 		geometry: {

@@ -1,11 +1,144 @@
 .cabinet-hero {
+	min-height: 615px;
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap: 30px;
+		&-flex {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		&-inputs {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 30px;
+			max-width: 700px;
+		}
+		&-product {
+			display: flex;
+			align-items: flex-start;
+			gap: 20px;
+		}
+	}
+	&__side {
+		&-left {
+			grid-column: 3 span;
+		}
+		&-right {
+			grid-column: 9 span;
+		}
 	}
 	&__title {
 		margin: 0;
 		margin-bottom: 30px;
+		&-side {
+			margin-bottom: 10px;
+		}
+	}
+	&__image {
+		&-user {
+			border: 1px solid var(--border-color);
+			border-radius: 10px;
+			max-width: 80px;
+			max-height: 80px;
+		}
+		&-product {
+			display: block;
+			min-width: 64px;
+			min-height: 51px;
+		}
+	}
+	&__text {
+		&-user {
+			margin: 0;
+		}
+		&-order {
+			margin: 0;
+			margin-bottom: 20px;
+		}
+		&-product {
+			margin: 0;
+			color: var(--light-blue-color);
+			max-width: 262px;
+			width: 100%;
+		}
+		&-price {
+			margin: 0;
+		}
+	}
+	&__data {
+		display: flex;
+		column-gap: 15px;
+		margin-bottom: 50px;
+	}
+	&__button {
+		color: var(--light-blue-color);
+		&-switchData {
+		}
+		&-order {
+		}
+	}
+	&__item {
+		&-nav {
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
+		}
+		&-order {
+			&:not(:last-child) {
+				margin-bottom: 18px;
+			}
+		}
+	}
+	&__link {
+		color: var(--light-blue-color);
+	}
+	&__input {
+		&-text {
+			padding: 12px 20px;
+			max-width: 300px;
+			width: 100%;
+			background: var(--grey-color);
+			border: 1px solid var(--border-color);
+			&::placeholder {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 17px;
+				color: var(--darker-grafite-color);
+			}
+		}
+	}
+	&__label {
+		&-change {
+			display: block;
+			cursor: pointer;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 17px;
+			color: var(--light-blue-color);
+			margin-top: 5px;
+			transition: color 0.3s ease, text-decoration 0.3s ease;
+			&-active {
+				text-decoration: underline;
+				color: var(--dark-blue-color);
+			}
+		}
+	}
+	&__product {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		max-width: 538px;
+		border-bottom: 1px solid var(--border-color);
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+	&__frame {
+		display: none;
+		&-visible {
+			display: block;
+		}
 	}
 }

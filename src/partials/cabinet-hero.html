@@ -1,0 +1,180 @@
+<section class="cabinet-hero">
+	<div class="container cabinet-hero__container">
+		<div class="cabinet-hero__side-left">
+			<div class="cabinet-hero__data">
+				<img
+					loading="lazy"
+					src="./img/user-image.svg"
+					class="image cabinet-hero__image-user"
+					width="80"
+					height="80"
+					alt="Иконка пользователя"
+				/>
+				<div class="cabinet-hero__container-flex">
+					<div class="cabinet-hero__container-text">
+						<p class="title__text cabinet-hero__text-user">Имя</p>
+						<p class="title__text cabinet-hero__text-user">
+							Фамилия
+						</p>
+					</div>
+					<button
+						class="btn-reset cabinet-hero__button cabinet-hero__button-change cabinet-hero__button-switchData"
+						data-frame="userData"
+					>
+						изменить данные
+					</button>
+				</div>
+			</div>
+			<h4 class="cabinet-hero__title cabinet-hero__title-side title__h4">
+				Заказы
+			</h4>
+			<ul class="list-reset cabinet-hero__list">
+				<li class="cabinet-hero__item-nav">
+					<a href="./basket.html" class="cabinet-hero__link">
+						Моя корзина
+					</a>
+				</li>
+				<li class="cabinet-hero__item-nav">
+					<button
+						class="btn-reset cabinet-hero__button cabinet-hero__button-change cabinet-hero__button-orders"
+						data-frame="orders"
+					>
+						Мои заказы
+					</button>
+				</li>
+			</ul>
+		</div>
+		<div class="cabinet-hero__side-right">
+			<ul class="list-reset cabinet-hero__frames">
+				<li
+					class="cabinet-hero__frame cabinet-hero__frame-visible"
+					id="userData"
+				>
+					<h4 class="cabinet-hero__title title__h4">
+						Учетные данные
+					</h4>
+					<ul class="list-reset cabinet-hero__container-inputs">
+						<li class="cabinet-hero__item-input">
+							<input
+								class="cabinet-hero__input-text"
+								type="text"
+								name="fio"
+								id="fio"
+								placeholder="Фамилия Имя Отчество"
+								disabled="disabled"
+							/>
+							<label class="cabinet-hero__label-change" for="fio">
+								изменить
+							</label>
+						</li>
+						<li class="cabinet-hero__item-input">
+							<input
+								class="cabinet-hero__input-text"
+								type="text"
+								name="tel"
+								id="tel"
+								placeholder="+7 901 456 45 67"
+								disabled="disabled"
+							/>
+							<label class="cabinet-hero__label-change" for="tel">
+								изменить
+							</label>
+						</li>
+						<li class="cabinet-hero__item-input">
+							<input
+								class="cabinet-hero__input-text"
+								type="text"
+								name="mail"
+								id="mail"
+								placeholder="pochta@gmail.com"
+								disabled="disabled"
+							/>
+							<label
+								class="cabinet-hero__label-change"
+								for="mail"
+							>
+								изменить
+							</label>
+						</li>
+					</ul>
+				</li>
+				<li class="cabinet-hero__frame" id="orders">
+					<h4 class="cabinet-hero__title title__h4">Мои заказы</h4>
+					<ul class="cabinet-hero__orders list-reset">
+						<li class="cabinet-hero__item-order">
+							<p class="title__text cabinet-hero__text-order">
+								Заказ от 23 марта 2023
+							</p>
+							<ul class="cabinet-hero__products list-reset">
+								<li class="cabinet-hero__product">
+									<div
+										class="cabinet-hero__container-product"
+									>
+										<picture>
+											<source
+												srcset="
+													./img/cabinet-product-1.webp
+												"
+												type="image/webp"
+											/>
+											<img
+												loading="lazy"
+												src="./img/cabinet-product-1.png"
+												class="image cabinet-hero__image-product"
+												width="64"
+												height="51"
+												alt="Изображение продукта"
+											/>
+										</picture>
+										<p
+											class="title__text cabinet-hero__text-product"
+										>
+											GoldRye 8 Pro
+										</p>
+									</div>
+									<p
+										class="title__text cabinet-hero__text-price"
+									>
+										232 900 ₽
+									</p>
+								</li>
+								<li class="cabinet-hero__product">
+									<div
+										class="cabinet-hero__container-product"
+									>
+										<picture>
+											<source
+												srcset="
+													./img/cabinet-product-2.webp
+												"
+												type="image/webp"
+											/>
+											<img
+												loading="lazy"
+												src="./img/cabinet-product-2.png"
+												class="image cabinet-hero__image-product"
+												width="64"
+												height="51"
+												alt="Изображение продукта"
+											/>
+										</picture>
+										<p
+											class="title__text cabinet-hero__text-product"
+										>
+											Шеф монтаж
+										</p>
+									</div>
+									<p
+										class="title__text cabinet-hero__text-price"
+									>
+										14 900 ₽
+									</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
