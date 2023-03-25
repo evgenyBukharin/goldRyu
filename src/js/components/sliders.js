@@ -54,20 +54,25 @@ const sliderThumbs = new Swiper(
 	{
 		direction: "vertical",
 		slidesPerView: 3,
-		spaceBetween: 40,
 		navigation: {
 			nextEl: ".catalog-item-hero__button-next",
 			prevEl: ".catalog-item-hero__button-prev",
 		},
 		freeMode: true,
-		// breakpoints: {
-		// 	0: {
-		// 		direction: "horizontal",
-		// 	},
-		// 	768: {
-		// 		direction: "vertical",
-		// 	},
-		// },
+		breakpoints: {
+			1025: {
+				spaceBetween: 40,
+			},
+			769: {
+				spaceBetween: 10,
+			},
+			// 0: {
+			// 	direction: "horizontal",
+			// },
+			// 768: {
+			// 	direction: "vertical",
+			// },
+		},
 	}
 );
 
