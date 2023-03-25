@@ -14,6 +14,7 @@
 		box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.1);
 		border-radius: 20px;
 		max-width: 1045px;
+		width: 100%;
 	}
 	&__slider {
 		& .swiper-container {
@@ -89,5 +90,47 @@
 	}
 	& .catalog-hero__container-price {
 		margin-bottom: 14px;
+	}
+}
+
+@media (max-width: 1305px) {
+	.catalog-item-hero {
+		&__container {
+			flex-wrap: wrap;
+			justify-content: center;
+			row-gap: 20px;
+		}
+		&__list {
+			margin-left: 0;
+			display: flex;
+		}
+		&__item {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			&:not(:last-child) {
+				margin-bottom: 0px;
+				min-width: 120px;
+			}
+		}
+		&__text {
+			margin-left: 0;
+			margin-top: 15px;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.catalog-item-hero {
+		&__image {
+			&-mini {
+				max-width: 80px;
+				max-height: 70px;
+			}
+		}
+		// & .container {
+		// 	padding-left: 50px;
+		// 	padding-right: 50px;
+		// }
 	}
 }
