@@ -52,7 +52,6 @@ const swiperFeedback = new Swiper(
 const sliderThumbs = new Swiper(
 	".catalog-item-hero__slider-thumbs .swiper-container",
 	{
-		direction: "vertical",
 		slidesPerView: 3,
 		navigation: {
 			nextEl: ".catalog-item-hero__button-next",
@@ -63,15 +62,13 @@ const sliderThumbs = new Swiper(
 			1025: {
 				spaceBetween: 40,
 			},
-			769: {
+			481: {
 				spaceBetween: 10,
+				direction: "vertical",
 			},
-			// 0: {
-			// 	direction: "horizontal",
-			// },
-			// 768: {
-			// 	direction: "vertical",
-			// },
+			0: {
+				direction: "horizontal",
+			},
 		},
 	}
 );
