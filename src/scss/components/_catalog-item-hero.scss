@@ -1,9 +1,37 @@
 .catalog-item-hero {
 	padding-bottom: 40px;
-
+	&__title {
+		margin: 0;
+		&-descr {
+			margin: 0;
+		}
+	}
+	&__descr {
+		margin-bottom: 40px;
+	}
 	&__container {
 		display: flex;
 		margin-bottom: 30px;
+		&-title {
+			margin-bottom: 20px;
+			display: flex;
+			align-items: center;
+		}
+		&-price {
+			&-hidden {
+				display: none;
+			}
+		}
+	}
+	&__discount {
+		margin-left: 20px;
+		border-radius: 5px;
+		background: var(--red-color);
+		color: var(--bg-color);
+		padding: 0 5px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 22px;
 	}
 	&__flex {
 		display: flex;
@@ -31,8 +59,6 @@
 	&__slide {
 		display: flex;
 		justify-content: center;
-		&-thumb {
-		}
 	}
 	&__icon {
 		filter: drop-shadow(
@@ -74,6 +100,11 @@
 	&__item {
 		display: flex;
 		align-items: center;
+		&-descr {
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
+		}
 		&:not(:last-child) {
 			margin-bottom: 30px;
 		}
@@ -134,6 +165,7 @@
 		&__list {
 			margin-left: 0;
 			display: flex;
+			width: 100%;
 		}
 		&__item {
 			display: flex;
@@ -141,7 +173,8 @@
 			align-items: flex-start;
 			&:not(:last-child) {
 				margin-bottom: 0px;
-				min-width: 120px;
+				max-width: 120px;
+				width: 100%;
 			}
 		}
 		&__text {
@@ -204,6 +237,21 @@
 		&__col {
 			margin-right: 60px;
 		}
+		&-descr {
+			margin-bottom: 35px;
+		}
+		&__item {
+			align-items: center;
+		}
+	}
+}
+
+@media (max-width: 670px) {
+	.catalog-item-hero {
+		&__list {
+			flex-wrap: wrap;
+			row-gap: 30px;
+		}
 	}
 }
 
@@ -217,6 +265,12 @@
 
 @media (max-width: 480px) {
 	.catalog-item-hero {
+		&__list {
+			justify-content: space-between;
+		}
+		&__item {
+			max-width: 145px;
+		}
 		& .container {
 			padding-left: 20px;
 			padding-right: 20px;
@@ -259,6 +313,29 @@
 		}
 		&__image-picture {
 			width: fit-content;
+		}
+		&__title {
+			font-weight: 600;
+			font-size: 28px;
+			line-height: 30px;
+			&-descr {
+				font-family: "Nunito Sans", sans-serif;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+		&__container {
+			&-price {
+				display: none;
+				&-hidden {
+					display: block;
+					margin-bottom: 30px;
+				}
+			}
+		}
+		&__descr {
+			margin-bottom: 30px;
 		}
 	}
 }

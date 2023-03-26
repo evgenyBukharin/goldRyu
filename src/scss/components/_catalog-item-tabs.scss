@@ -4,8 +4,8 @@
 	&__list {
 		display: flex;
 		&-adv {
-			display: flex;
-			flex-wrap: wrap;
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
 			gap: 30px;
 		}
 	}
@@ -16,7 +16,7 @@
 			&::after {
 				content: "";
 				width: 1px;
-				height: 25px;
+				height: 100%;
 				background-color: var(--dark-blue-color);
 				position: absolute;
 				right: -18%;
@@ -25,10 +25,10 @@
 		}
 		&-adv {
 			display: flex;
-			max-width: 375px;
-			&-static {
+			grid-column: 4 span;
+			&-bottom {
 				&:nth-child(even) {
-					margin-right: 15%;
+					grid-column: 8 span;
 				}
 			}
 		}
@@ -70,5 +70,83 @@
 	&__title {
 		margin: 0;
 		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.catalog-item-tabs {
+		& .container {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		&__list {
+			justify-content: center;
+		}
+		&__btn {
+			font-size: 16px;
+			line-height: 20px;
+			white-space: nowrap;
+		}
+		&__item {
+			&:not(:last-child) {
+				margin-right: 50px;
+				&::after {
+					right: -23%;
+				}
+			}
+			&-adv {
+				&-bottom {
+					grid-column: 5 span;
+					&:nth-child(even) {
+						grid-column: 6 span;
+					}
+				}
+			}
+		}
+		&__text {
+			&-main {
+				max-width: 255px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.catalog-item-tabs {
+		&__btn {
+			font-weight: 600;
+			font-size: 13px;
+			line-height: 16px;
+		}
+		&__item {
+			grid-column: 6 span;
+			&:not(:last-child) {
+				margin-right: 26px;
+				&::after {
+					right: -14px;
+				}
+			}
+		}
+		&__icon {
+			&-adv {
+				margin-right: 20px;
+			}
+		}
+		&__text {
+			&-main {
+				// max-width: 229px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.catalog-item-tabs {
+		& .container {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		&__item {
+		}
 	}
 }

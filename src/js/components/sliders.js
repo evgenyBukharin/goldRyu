@@ -53,6 +53,7 @@ const sliderThumbs = new Swiper(
 	".catalog-item-hero__slider-thumbs .swiper-container",
 	{
 		slidesPerView: 3,
+		direction: "vertical",
 		navigation: {
 			nextEl: ".catalog-item-hero__button-next",
 			prevEl: ".catalog-item-hero__button-prev",
@@ -175,12 +176,10 @@ if (designNextBtn !== null) {
 				formData[input.name] = input.value;
 			});
 
-			// смена слайда
 			if (formData.color == "под заказ") {
 				slideToHide.style.display = "none";
 			}
 
-			// Применение собранных данных с формы
 			const importedImages = document.querySelectorAll(
 				".main-degign__image-imported"
 			);
