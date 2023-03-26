@@ -6,12 +6,19 @@
 		margin-bottom: 30px;
 	}
 	& .catalog-hero__item-category {
-		grid-column: 3 span;
 		&::after {
 			display: none;
 		}
 	}
 	& .catalog-hero__title-category {
 		color: var(--dark-blue-color);
+	}
+}
+
+@media (min-width: 1025px) and (max-width: 1920px) {
+	.catalog-item-stuff {
+		.catalog-hero__item-category {
+			grid-column: 3 span;
+		}
 	}
 }

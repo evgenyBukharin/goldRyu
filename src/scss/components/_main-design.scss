@@ -211,3 +211,29 @@
 		}
 	}
 }
+
+@media (max-width: 1024px) {
+	.main-design {
+		&__title {
+			font-weight: 600;
+			font-size: 28px;
+			line-height: 30px;
+			margin-bottom: 13px;
+			max-width: unset;
+		}
+		&__subtitle {
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 25px;
+			margin-bottom: 40px;
+			max-width: 723px;
+		}
+		&__container {
+			padding-left: 55px;
+			padding-right: 55px;
+		}
+		&__slide {
+			padding: 50px 75px 50px 71px;
+		}
+	}
+}
