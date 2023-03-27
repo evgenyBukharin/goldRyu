@@ -15,14 +15,24 @@ const swiperHero = new Swiper(document.querySelector(".main-hero__slider"), {
 	creativeEffect: {
 		prev: {
 			translate: [0, 0, -100],
+			opacity: 0,
 		},
 		next: {
 			translate: ["100%", 0, 0],
+			opacity: 1,
 		},
 	},
 	pagination: {
 		el: ".main-hero__pagination",
 		type: "progressbar",
+	},
+	breakpoints: {
+		481: {
+			enabled: true,
+		},
+		0: {
+			enabled: false,
+		},
 	},
 });
 
