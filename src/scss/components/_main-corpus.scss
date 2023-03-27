@@ -1,5 +1,6 @@
 .main-corpus {
 	padding-bottom: 75px;
+	margin-top: 100px;
 	&__container {
 		position: relative;
 		min-height: 780px;
@@ -100,5 +101,17 @@
 					-8.66327px 6.88572px 2.45312px rgba(38, 38, 38, 0.14)
 				);
 		}
+	}
+}
+
+@media (max-width: 768px) {
+	.main-corpus {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 480px) {
+	.main-corpus {
+		margin-top: 30px;
 	}
 }
