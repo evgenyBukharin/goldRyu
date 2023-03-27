@@ -5,9 +5,16 @@
 		color: var(--dark-blue-color);
 	}
 	& .catalog-hero__item-category {
-		grid-column: 3 span;
 		&::after {
 			display: none;
+		}
+	}
+}
+
+@media (min-width: 1025px) and (max-width: 1920px) {
+	.catalog-item-other {
+		.catalog-hero__item-category {
+			grid-column: 3 span;
 		}
 	}
 }
