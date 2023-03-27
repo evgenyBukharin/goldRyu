@@ -56,6 +56,15 @@ const swiperFeedback = new Swiper(
 			nextEl: ".main-feedback__button-next",
 			prevEl: ".main-feedback__button-prev",
 		},
+		breakpoints: {
+			481: {
+				enabled: true,
+			},
+			0: {
+				slidesPerView: 1,
+				enabled: false,
+			},
+		},
 	}
 );
 

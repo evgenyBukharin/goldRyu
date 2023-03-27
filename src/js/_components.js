@@ -5,3 +5,4 @@ import "./components/maps";
 import "./components/tabs";
 import "./components/categories";
 import "./components/cabinet";
+import "./components/more-btn";
