@@ -120,6 +120,7 @@
 
 @media (max-width: 480px) {
 	.footer {
+		transform: translateY(-57px);
 		padding-top: 20px;
 		padding-bottom: 20px;
 		&__container {
