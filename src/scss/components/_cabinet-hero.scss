@@ -1,5 +1,5 @@
 .cabinet-hero {
-	min-height: 615px;
+	padding-bottom: 380px;
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
@@ -144,6 +144,7 @@
 
 @media (max-width: 1024px) {
 	.cabinet-hero {
+		padding-bottom: 320px;
 		&__side {
 			&-left {
 				grid-column: 4 span;
@@ -176,6 +177,7 @@
 
 @media (max-width: 480px) {
 	.cabinet-hero {
+		padding-bottom: 320px;
 		&__side {
 			&-left {
 				grid-column: 12 span;

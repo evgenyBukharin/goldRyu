@@ -120,11 +120,10 @@
 
 @media (max-width: 480px) {
 	.footer {
-		transform: translateY(-57px);
 		padding-top: 20px;
 		padding-bottom: 20px;
+		margin-bottom: 57px;
 		&__container {
-			padding-top: 57px;
 			flex-wrap: wrap;
 			&-logo {
 				margin: 0 auto;
