@@ -1,6 +1,7 @@
 .header {
 	background: var(--grey-color);
-
+	position: relative;
+	z-index: 1000;
 	&__container {
 		padding-top: 35px;
 		padding-bottom: 20px;

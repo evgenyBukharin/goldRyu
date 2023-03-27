@@ -1,0 +1,7 @@
+.burger {
+	@include burger;
+	--burger-width: 22px;
+	--burger-height: 14px;
+	--burger-line-height: 2px;
+	color: var(--dark-blue-color);
+}
