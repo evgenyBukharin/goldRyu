@@ -30,7 +30,9 @@
 	}
 	&__button {
 		background: var(--blue-color);
+		display: block;
 		margin-top: 30px;
+		width: fit-content;
 		&-share {
 			margin-top: 72px;
 			display: flex;

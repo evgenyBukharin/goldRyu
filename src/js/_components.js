@@ -6,4 +6,6 @@ import "./components/tabs";
 import "./components/categories";
 import "./components/cabinet";
 import "./components/menu";
+import "./components/video-controller";
 import "./components/more-btn";
+import "./components/up-button";

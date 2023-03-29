@@ -4,8 +4,16 @@ import Swiper, {
 	Navigation,
 	Thumbs,
 	Manipulation,
+	Autoplay,
 } from "swiper";
-Swiper.use([Pagination, EffectCreative, Navigation, Thumbs, Manipulation]);
+Swiper.use([
+	Pagination,
+	EffectCreative,
+	Navigation,
+	Thumbs,
+	Manipulation,
+	Autoplay,
+]);
 const swiperHero = new Swiper(document.querySelector(".main-hero__slider"), {
 	slidesPerView: "auto",
 	spaceBetween: 40,
@@ -33,6 +41,11 @@ const swiperHero = new Swiper(document.querySelector(".main-hero__slider"), {
 		0: {
 			enabled: false,
 		},
+	},
+	loop: true,
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
 	},
 });
 

@@ -1,0 +1,14 @@
+.up-button {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	&__container {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__button {
+		transform: translateX(calc(100% + 26px));
+	}
+}
