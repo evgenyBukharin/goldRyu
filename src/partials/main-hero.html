@@ -34,20 +34,42 @@
 							</a>
 						</div>
 					</div>
-					<picture>
-						<source
-							srcset="./img/slide-image.webp"
-							type="image/webp"
-						/>
-						<img
-							loading="lazy"
-							src="./img/slide-image.png"
-							class="image main-hero__image"
-							width="532"
-							height="476"
-							alt="Изображение слайда"
-						/>
-					</picture>
+					<div class="main-feedback__container-video">
+						<div class="main-feedback__video-play">
+							<img
+								loading="lazy"
+								src="./img/play.svg"
+								class="image main-feedback__icon-play"
+								width="26"
+								height="37"
+								alt="Иконка play"
+							/>
+						</div>
+						<div
+							class="main-feedback__video-control main-feedback__video-over"
+						></div>
+						<video
+							preload="auto"
+							muted
+							class="main-feedback__video"
+							width="607"
+							height="340"
+						>
+							<source
+								src="./img/main-video.mp4"
+								type="video/mp4"
+							/>
+							<source
+								src="./img/main-video.webm"
+								type="video/webm"
+							/>
+						</video>
+						<div class="main-feedback__container-fullscreen">
+							<button
+								class="btn-reset main-feedback__button-fullscreen"
+							></button>
+						</div>
+					</div>
 				</div>
 				<div class="swiper-slide main-hero__slide">
 					<div class="main-hero__content">
@@ -80,7 +102,7 @@
 							</a>
 						</div>
 					</div>
-					<picture>
+					<!-- <picture>
 						<source
 							srcset="./img/slide-image.webp"
 							type="image/webp"
@@ -93,7 +115,7 @@
 							height="476"
 							alt="Изображение слайда"
 						/>
-					</picture>
+					</picture> -->
 				</div>
 				<div class="swiper-slide main-hero__slide">
 					<div class="main-hero__content">
@@ -128,7 +150,7 @@
 							</a>
 						</div>
 					</div>
-					<picture>
+					<!-- <picture>
 						<source
 							srcset="./img/slide-image.webp"
 							type="image/webp"
@@ -141,7 +163,7 @@
 							height="476"
 							alt="Изображение слайда"
 						/>
-					</picture>
+					</picture> -->
 				</div>
 			</div>
 		</div>

@@ -29,6 +29,7 @@
 		box-sizing: border-box;
 		display: flex;
 		justify-content: space-between;
+		gap: 24px;
 	}
 	&__pagination {
 		display: block;
@@ -99,6 +100,16 @@
 			margin-bottom: 10px;
 		}
 	}
+	& .main-feedback {
+		&__container-video {
+			margin: auto 0;
+			width: 100%;
+			height: fit-content;
+		}
+		&__video {
+			max-width: unset;
+		}
+	}
 }
 
 @media (max-width: 1024px) {
@@ -118,6 +129,7 @@
 			border-radius: 0;
 			padding: 0;
 			background: var(--bg-color);
+			flex-wrap: wrap;
 		}
 	}
 }
@@ -184,6 +196,11 @@
 			justify-content: center;
 			&:not(:last-child) {
 				margin: 0;
+			}
+		}
+		& .main-feedback {
+			&__container-video {
+				display: none;
 			}
 		}
 	}

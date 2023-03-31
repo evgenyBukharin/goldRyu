@@ -20,6 +20,7 @@ const swiperHero = new Swiper(document.querySelector(".main-hero__slider"), {
 	resistanceRatio: 0,
 	speed: 400,
 	effect: "creative",
+	grabCursor: true,
 	creativeEffect: {
 		prev: {
 			translate: [0, 0, -100],
@@ -43,10 +44,10 @@ const swiperHero = new Swiper(document.querySelector(".main-hero__slider"), {
 		},
 	},
 	loop: true,
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: false,
-	},
+	// autoplay: {
+	// 	delay: 5000,
+	// 	pauseOnMouseEnter: true,
+	// },
 });
 
 const swiperFeedback = new Swiper(
