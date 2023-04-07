@@ -1,7 +1,7 @@
 .docs-hero {
 	&__container {
 		padding-top: 70px;
-		padding-bottom: 112px;
+		padding-bottom: 190px;
 	}
 	&__list {
 		display: grid;
@@ -29,19 +29,31 @@
 	}
 	&__content {
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
+		align-items: center;
 	}
 	&__title {
 		color: var(--light-blue-color);
 		font-weight: 600;
 	}
+	&__button {
+		&-download {
+			margin-top: 30px;
+			width: 151px;
+		}
+	}
 	&__docs {
-		& .docs-hero__doc:not(:last-of-type) {
-			margin-bottom: 5px;
+		& .docs-hero__doc {
+			&:not(:last-of-type) {
+				margin-bottom: 5px;
+			}
 		}
 	}
 	&__link {
 		color: var(--light-blue-color);
+	}
+	& .accordion__content-open-docs {
+		padding-bottom: 20px;
 	}
 }
 
