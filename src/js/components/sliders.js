@@ -19,18 +19,7 @@ const swiperHero = new Swiper(document.querySelector(".main-hero__slider"), {
 	spaceBetween: 40,
 	resistanceRatio: 0,
 	speed: 400,
-	effect: "creative",
 	grabCursor: true,
-	creativeEffect: {
-		prev: {
-			translate: [0, 0, -100],
-			opacity: 0,
-		},
-		next: {
-			translate: ["100%", 0, 0],
-			opacity: 1,
-		},
-	},
 	pagination: {
 		el: ".main-hero__pagination",
 		type: "progressbar",
@@ -44,10 +33,10 @@ const swiperHero = new Swiper(document.querySelector(".main-hero__slider"), {
 		},
 	},
 	loop: true,
-	// autoplay: {
-	// 	delay: 5000,
-	// 	pauseOnMouseEnter: true,
-	// },
+	autoplay: {
+		delay: 5000,
+		pauseOnMouseEnter: true,
+	},
 });
 
 const swiperFeedback = new Swiper(

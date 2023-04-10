@@ -7,5 +7,6 @@ import "./components/cabinet";
 import "./components/menu";
 import "./components/video-controller";
 import "./components/more-btn";
+import "./components/categories";
 import "./components/search-icons";
 import "./components/up-button";
