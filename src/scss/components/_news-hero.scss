@@ -17,6 +17,10 @@
 	}
 	&__title {
 		margin: 0;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		overflow: hidden;
 	}
 	&__item {
 		grid-column: 3 span;

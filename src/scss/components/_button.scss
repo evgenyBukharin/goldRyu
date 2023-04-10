@@ -22,6 +22,18 @@
 			display: flex;
 			padding-top: 8px;
 			padding-bottom: 8px;
+			&-svg {
+				width: 24px;
+				height: 22px;
+				fill: white;
+			}
+			&:disabled {
+				fill: var(--grafite-color);
+				background: var(--disabled-color);
+			}
+			&-active {
+				background-color: var(--dark-blue-color);
+			}
 		}
 	}
 	&__secondary {
