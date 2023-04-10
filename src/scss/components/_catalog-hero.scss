@@ -132,6 +132,10 @@
 		&-category {
 			position: relative;
 			grid-column: 3 span;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
 			&:nth-child(4n - 3)::after {
 				content: "";
 				width: 100vw;
@@ -349,6 +353,29 @@
 		&__container {
 			padding-left: 5px;
 			padding-right: 5px;
+		}
+	}
+}
+
+@media (max-width: 345px) {
+	.catalog-hero {
+		&__container {
+			&-inner {
+				width: 100%;
+			}
+		}
+		&__item {
+			&-category {
+				grid-column: 12 span;
+				&:nth-child(1n-1)::after {
+					content: "";
+					width: 100vh;
+					border-bottom: 1px solid var(--border-color);
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+			}
 		}
 	}
 }
