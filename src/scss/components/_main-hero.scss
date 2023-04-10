@@ -1,5 +1,5 @@
 .main-hero {
-	padding-top: 93px;
+	padding-top: 100px;
 	&__container {
 		padding-bottom: 69px;
 		&-pagination {
@@ -30,6 +30,12 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 24px;
+		&-image {
+			padding: 0;
+		}
+	}
+	&__picture {
+		display: flex;
 	}
 	&__pagination {
 		display: block;
@@ -148,6 +154,11 @@
 			line-height: 20px;
 			margin-bottom: 30px;
 		}
+		&__slide {
+			& .main-feedback__container-video {
+				display: none;
+			}
+		}
 	}
 }
 
@@ -164,7 +175,7 @@
 			}
 		}
 		&__slide {
-			&:not(:first-child) {
+			&:not(:nth-child(2)) {
 				display: none;
 			}
 		}
