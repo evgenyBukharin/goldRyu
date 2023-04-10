@@ -1,0 +1,59 @@
+.discount-hero {
+	padding-bottom: 150px;
+	&__title {
+		margin: 0;
+	}
+	&__image {
+		margin-bottom: 30px;
+		width: 100%;
+	}
+	&-export {
+		.discount-hero {
+			&__title {
+				display: none;
+			}
+			&__container {
+				border: 0.722481px solid var(--border-color);
+				background: var(--white-color);
+				box-shadow: -45.7972px 61.3805px 57.7985px
+						rgba(0, 0, 0, 0.02768),
+					-28.0313px 37.5695px 30.1477px rgba(0, 0, 0, 0.04384),
+					-15.6575px 20.9852px 14.1491px rgba(0, 0, 0, 0.05616),
+					-7.84601px 10.5158px 6.19599px rgba(0, 0, 0, 0.07232),
+					-3.76747px 5.04941px 2.68185px rgba(0, 0, 0, 0.1);
+				border-radius: 15px;
+				padding: 30px;
+				padding-bottom: 40px;
+			}
+			&__list {
+				margin-top: 0;
+				margin-bottom: 30px;
+			}
+			&__item {
+				box-shadow: none;
+			}
+			&__button {
+				&-more {
+					display: block;
+					margin: 0 auto;
+					width: fit-content;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.discount-hero {
+		padding-bottom: 60px;
+	}
+}
+@media (max-width: 480px) {
+	.discount-hero {
+		&__title {
+			font-weight: 600;
+			font-size: 28px;
+			line-height: 30px;
+		}
+	}
+}
