@@ -154,6 +154,10 @@
 		&-category {
 			position: relative;
 			grid-column: 3 span;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
 			&:nth-child(4n - 3)::after {
 				content: "";
 				width: 100vw;
@@ -330,7 +334,7 @@
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 610px) {
 	.catalog-hero {
 		&__list {
 			flex-direction: column;
@@ -377,6 +381,29 @@
 		&__container {
 			padding-left: 5px;
 			padding-right: 5px;
+		}
+	}
+}
+
+@media (max-width: 345px) {
+	.catalog-hero {
+		&__list {
+			&-category {
+				column-gap: 0;
+			}
+		}
+		&__item {
+			&-category {
+				grid-column: 12 span;
+			}
+		}
+		&__container {
+			padding-left: 15px;
+			padding-right: 15px;
+			column-gap: 0;
+			&-inner {
+				width: 100%;
+			}
 		}
 	}
 }
