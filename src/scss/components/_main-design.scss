@@ -277,6 +277,7 @@
 	.main-design {
 		&__label {
 			grid-column: 3 / 11;
+			width: unset;
 		}
 		&__slide {
 			padding: 20px;
