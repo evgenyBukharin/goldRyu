@@ -7,6 +7,12 @@
 		margin-bottom: 30px;
 		width: 100%;
 	}
+	&__button {
+		&-more {
+			display: none;
+		}
+	}
+	// .discount-hero-export - класс для переключения вида блока скидок и ы
 	&-export {
 		.discount-hero {
 			&__title {
