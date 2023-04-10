@@ -1,0 +1,22 @@
+.policy-hero {
+	min-height: 100vh;
+	padding-bottom: 120px;
+	&__title {
+		margin: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.policy-hero {
+		padding-bottom: 60px;
+	}
+}
+
+@media (max-width: 480px) {
+	.policy-hero {
+		&__title {
+			font-size: 28px;
+			line-height: 30px;
+		}
+	}
+}
