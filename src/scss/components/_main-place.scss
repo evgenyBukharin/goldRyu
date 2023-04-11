@@ -1,5 +1,5 @@
 .main-place {
-	margin-top: 150px;
+	margin-top: 50px;
 	padding-bottom: 75px;
 	&__container {
 		padding: 59px 175px;
@@ -68,8 +68,8 @@
 
 @media (max-width: 1024px) {
 	.main-place {
-		padding-bottom: 24px;
-		margin-top: 41px;
+		margin-top: 30px;
+		padding-bottom: 35px;
 		&__text {
 			white-space: unset;
 		}
@@ -110,9 +110,11 @@
 
 @media (max-width: 480px) {
 	.main-place {
+		padding-bottom: 30px;
 		&__item {
 			grid-column: 12 span;
 			column-gap: 0;
+			row-gap: 10px;
 		}
 		&__text {
 			max-width: unset;
@@ -143,6 +145,8 @@
 
 @media (max-width: 360px) {
 	.main-place {
+		margin-top: 25px;
+		padding-bottom: 25px;
 		&__container {
 			background: var(--grey-color);
 			border: 1px solid var(--border-color);

@@ -1,5 +1,5 @@
 .main-feedback {
-	margin-top: 75px;
+	margin-top: 50px;
 	padding-bottom: 50px;
 	&__container {
 		&-pagination {
@@ -154,13 +154,13 @@
 
 @media (max-width: 1024px) {
 	.main-feedback {
+		margin-top: 35px;
+		padding-bottom: 35px;
 		&__title {
 			margin-bottom: 30px;
 			font-weight: 600;
 			font-size: 28px;
 			line-height: 30px;
-		}
-		&__video {
 		}
 		&__subtitle {
 			font-weight: 600;
@@ -194,6 +194,8 @@
 
 @media (max-width: 480px) {
 	.main-feedback {
+		margin-top: 30px;
+		padding-bottom: 30px;
 		&__video {
 			height: unset;
 		}
@@ -233,6 +235,8 @@
 
 @media (max-width: 360px) {
 	.main-feedback {
+		margin-top: 25px;
+		padding-bottom: 25px;
 		&__slide {
 			padding-left: 0;
 			padding-right: 0;

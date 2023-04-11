@@ -1,7 +1,8 @@
 .main-hero {
 	padding-top: 100px;
+	padding-bottom: 50px;
 	&__container {
-		padding-bottom: 69px;
+		padding-bottom: 15px;
 		&-pagination {
 			width: 100%;
 			margin-top: 62px;
@@ -126,7 +127,7 @@
 
 @media (max-width: 1024px) {
 	.main-hero {
-		padding-top: 83px;
+		padding-bottom: 35px;
 		&__container {
 			padding-left: 50px;
 			padding-right: 50px;
@@ -142,12 +143,16 @@
 			padding: 0;
 			background: var(--bg-color);
 			flex-wrap: wrap;
+			& .main-feedback__container-video {
+				display: none;
+			}
 		}
 	}
 }
 
 @media (max-width: 768px) {
 	.main-hero {
+		padding-top: 50px;
 		&__title {
 			font-weight: 600;
 			font-size: 28px;
@@ -159,11 +164,6 @@
 			font-size: 16px;
 			line-height: 20px;
 			margin-bottom: 30px;
-		}
-		&__slide {
-			& .main-feedback__container-video {
-				display: none;
-			}
 		}
 	}
 }
@@ -225,6 +225,8 @@
 
 @media (max-width: 360px) {
 	.main-hero {
+		padding-top: 30px;
+		padding-bottom: 25px;
 		&__buttons {
 			flex-wrap: wrap;
 		}

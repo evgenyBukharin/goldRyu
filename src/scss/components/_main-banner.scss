@@ -1,6 +1,6 @@
 .main-banner {
-	margin-top: 115px;
-	padding-bottom: 75px;
+	margin-top: 50px;
+	padding-bottom: 120px;
 	&__container {
 		background-image: url("../img/main-banner-bg.png");
 		background-repeat: no-repeat;
@@ -27,7 +27,8 @@
 
 @media (max-width: 1024px) {
 	.main-banner {
-		margin-top: 50px;
+		margin-top: 35px;
+		padding-bottom: 270px;
 		& .container {
 			padding-left: 50px;
 			padding-right: 50px;
@@ -52,6 +53,7 @@
 
 @media (max-width: 768px) {
 	.main-banner {
+		padding-bottom: 200px;
 		&__container {
 			padding: 28px 34px 48px;
 		}
@@ -86,5 +88,12 @@
 		&__subtitle {
 			text-align: center;
 		}
+	}
+}
+
+@media (max-width: 360px) {
+	.main-banner {
+		margin-top: 25px;
+		padding-bottom: 25px;
 	}
 }

@@ -1,6 +1,6 @@
 .main-advantages {
-	margin-top: 75px;
-	padding-bottom: 136px;
+	margin-top: 50px;
+	padding-bottom: 50px;
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -53,6 +53,8 @@
 
 @media (max-width: 1024px) {
 	.main-advantages {
+		margin-top: 35px;
+		padding-bottom: 35px;
 		&__container {
 			padding-left: 50px;
 			padding-right: 50px;
@@ -100,6 +102,7 @@
 
 @media (max-width: 480px) {
 	.main-advantages {
+		margin-top: 30px;
 		padding-bottom: 30px;
 		&__container {
 			padding-left: 20px;
@@ -127,6 +130,8 @@
 
 @media (max-width: 360px) {
 	.main-advantages {
+		margin-top: 25px;
+		padding-bottom: 25px;
 		&__list {
 			row-gap: 30px;
 			column-gap: 0;

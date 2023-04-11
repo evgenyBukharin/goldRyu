@@ -1,6 +1,6 @@
 .main-design {
-	margin-top: 75px;
-	padding-bottom: 75px;
+	margin-top: 50px;
+	padding-bottom: 50px;
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -232,6 +232,8 @@
 
 @media (max-width: 1024px) {
 	.main-design {
+		margin-top: 35px;
+		padding-bottom: 35px;
 		&__title {
 			font-weight: 600;
 			font-size: 28px;
@@ -317,6 +319,8 @@
 
 @media (max-width: 480px) {
 	.main-design {
+		margin-top: 30px;
+		padding-bottom: 30px;
 		&__subtitle-frame {
 			font-weight: 600;
 			font-size: 20px;
@@ -327,5 +331,12 @@
 			grid-column: 12 span;
 			border: 1px solid var(--border-color);
 		}
+	}
+}
+
+@media (max-width: 360px) {
+	.main-design {
+		margin-top: 25px;
+		padding-bottom: 25px;
 	}
 }
