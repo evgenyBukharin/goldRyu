@@ -12,7 +12,7 @@
 			display: none;
 		}
 	}
-	// .discount-hero-export - класс для переключения вида блока скидок и ы
+	// .discount-hero-export - класс для переключения вида блока скидок и акций
 	&-export {
 		.discount-hero {
 			&__title {
@@ -56,6 +56,9 @@
 }
 @media (max-width: 480px) {
 	.discount-hero {
+		&__item {
+			grid-column: 12 span;
+		}
 		&__title {
 			font-weight: 600;
 			font-size: 28px;

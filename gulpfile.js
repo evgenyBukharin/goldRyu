@@ -240,22 +240,9 @@ const resources = () => {
 };
 
 const images = () => {
-	return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,webm,mp4}`])
-		.pipe(
-			gulpif(
-				isProd,
-				image([
-					image.mozjpeg({
-						quality: 80,
-						progressive: true,
-					}),
-					image.optipng({
-						optimizationLevel: 2,
-					}),
-				])
-			)
-		)
-		.pipe(dest(paths.buildImgFolder));
+	return src([
+		`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,webm,mp4}`,
+	]).pipe(dest(paths.buildImgFolder));
 };
 
 const webpImages = () => {
@@ -384,8 +371,7 @@ exports.build = series(
 	resources,
 	images,
 	webpImages,
-	svgSprites,
-	htmlMinify
+	svgSprites
 );
 
 exports.cache = series(cache, rewrite);

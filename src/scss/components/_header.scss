@@ -20,6 +20,7 @@
 		align-items: flex-end;
 	}
 	&__item {
+		display: flex;
 		&:not(:last-child) {
 			margin-right: 30px;
 		}

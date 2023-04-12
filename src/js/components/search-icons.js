@@ -1,24 +1,27 @@
 const searchSection = document.querySelector(".search");
 const searchIcons = document.querySelectorAll(".search-icon");
 const searchContent = document.querySelector(".search__content");
-import { disableScroll } from "../functions/disable-scroll";
-import { enableScroll } from "../functions/enable-scroll";
+const burger = document.getElementById("burger");
+const menuBg = document.querySelector(".menu__bg");
 
 if (searchIcons !== null && searchSection !== null && searchContent !== null) {
 	searchIcons.forEach((icon) => {
 		icon.addEventListener("click", () => {
 			if (searchSection.classList.contains("search-visible")) {
 				searchSection.classList.remove("search-visible");
-				enableScroll();
 			} else {
-				searchSection.classList.add("search-visible");
-				disableScroll();
+				if (burger !== null && menuBg !== null) {
+					menuBg.classList.remove("menu__bg-active");
+					burger.classList.remove("burger--active");
+				}
+				setTimeout(() => {
+					searchSection.classList.add("search-visible");
+				}, 300);
 			}
 		});
 	});
 	searchSection.addEventListener("click", () => {
 		searchSection.classList.remove("search-visible");
-		enableScroll();
 	});
 	searchContent.addEventListener("click", (e) => {
 		e.stopPropagation();

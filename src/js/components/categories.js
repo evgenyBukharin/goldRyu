@@ -22,6 +22,10 @@ if (
 			);
 			hiddenContainer.classList.remove("catalog-hero__container-hidden");
 			visibleContainer.classList.add("catalog-hero__container-hidden");
+			document.querySelector(".header").scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+			});
 		});
 	});
 }
