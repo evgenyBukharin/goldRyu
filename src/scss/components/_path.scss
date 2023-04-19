@@ -30,3 +30,12 @@
 		color: var(--darker-blue-color);
 	}
 }
+
+@media (max-width: 768px) {
+	.path {
+		margin-top: 35px;
+		&__container {
+			display: none;
+		}
+	}
+}

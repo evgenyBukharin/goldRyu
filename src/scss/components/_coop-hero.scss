@@ -3,7 +3,6 @@
 	&__container {
 		position: relative;
 		display: flex;
-		align-items: center;
 		gap: 30px;
 		&-advantages {
 			& .coop-hero__text {
@@ -18,7 +17,7 @@
 	}
 	&__image {
 		border-radius: 15px;
-		height: 505px;
+		height: 412px;
 		filter: drop-shadow(-63.3888px 84.958px 80px rgba(0, 0, 0, 0.02768))
 			drop-shadow(-38.7987px 52.0007px 41.728px rgba(0, 0, 0, 0.04384))
 			drop-shadow(-21.6718px 29.046px 19.584px rgba(0, 0, 0, 0.05616))
@@ -40,19 +39,28 @@
 	}
 	&__text {
 		margin: 0;
+		&-shorter {
+			max-width: 511px;
+		}
 	}
 	&__button {
 		margin-top: 60px;
 	}
 	&__advantages {
-		max-width: 511px;
+		margin-top: 14px;
+		max-width: 628px;
 	}
 }
 
 @media (max-width: 1024px) {
 	.coop-hero {
 		&__advantages {
-			max-width: 447px;
+			margin-top: 0;
+		}
+		&__text {
+			&-shorter {
+				max-width: 447px;
+			}
 		}
 	}
 }
@@ -61,12 +69,17 @@
 	.coop-hero {
 		&__image {
 			height: 370px;
-			width: 100%;
+			width: 768px;
 		}
 		&__container {
 			flex-wrap: wrap;
 			padding-right: 50px;
 			padding-left: 50px;
+		}
+		&__text {
+			&-shorter {
+				max-width: 100%;
+			}
 		}
 		&__advantages {
 			max-width: 100%;
