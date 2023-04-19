@@ -1,5 +1,5 @@
 .catalog-hero {
-	padding-bottom: 500px;
+	padding-bottom: 130px;
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
@@ -45,7 +45,7 @@
 			display: none;
 		}
 		&-visible {
-			padding-bottom: 250px;
+			padding-bottom: 270px;
 			& .catalog-hero {
 				&__item-category {
 					&:nth-child(4n-3)::after {
