@@ -1,7 +1,8 @@
 export default class Tabs {
-	constructor(selector, innerElems) {
+	constructor(selector, innerElems, starterId) {
 		this.selector = selector;
 		this.innerElements = innerElems;
+		this.starterId = starterId;
 		this.tabs = document.querySelector(`[data-tabs="${selector}"]`);
 		if (this.tabs) {
 			this.tabList = this.tabs.querySelector("." + innerElems.list);
@@ -31,10 +32,14 @@ export default class Tabs {
 			el.setAttribute("aria-labelledby", this.tabsBtns[i].id);
 			el.classList.remove(this.innerElements.panel + "-active");
 		});
-		this.tabsBtns[1].classList.add(this.innerElements.button + "-active");
-		this.tabsBtns[1].removeAttribute("tabindex");
-		this.tabsBtns[1].setAttribute("aria-selected", "true");
-		this.tabsPanels[1].classList.add(this.innerElements.panel + "-active");
+		this.tabsBtns[this.starterId].classList.add(
+			this.innerElements.button + "-active"
+		);
+		this.tabsBtns[this.starterId].removeAttribute("tabindex");
+		this.tabsBtns[this.starterId].setAttribute("aria-selected", "true");
+		this.tabsPanels[this.starterId].classList.add(
+			this.innerElements.panel + "-active"
+		);
 	}
 	events() {
 		this.tabsBtns.forEach((el, i) => {
@@ -92,14 +97,22 @@ export default class Tabs {
 	}
 }
 
-const catalogtabs = new Tabs("tab", {
-	list: "catalog-item-tabs__list",
-	button: "catalog-item-tabs__btn",
-	panel: "catalog-item-tabs__panel",
-});
+const catalogtabs = new Tabs(
+	"tab",
+	{
+		list: "catalog-item-tabs__list",
+		button: "catalog-item-tabs__btn",
+		panel: "catalog-item-tabs__panel",
+	},
+	2
+);
 
-const quizTabs = new Tabs("quizTab", {
-	list: "quiz__list-tabs",
-	button: "quiz__btn",
-	panel: "quiz__panel",
-});
+const quizTabs = new Tabs(
+	"quizTab",
+	{
+		list: "quiz__list-tabs",
+		button: "quiz__btn",
+		panel: "quiz__panel",
+	},
+	0
+);

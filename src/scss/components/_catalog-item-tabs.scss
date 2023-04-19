@@ -1,6 +1,11 @@
 .catalog-item-tabs {
 	margin-top: 40px;
 	padding-bottom: 40px;
+	&__container {
+		&-adv {
+			margin-top: 80px;
+		}
+	}
 	&__list {
 		display: flex;
 		&-adv {
@@ -42,7 +47,7 @@
 	}
 	&__content {
 		margin-top: 50px;
-		margin-bottom: 80px;
+		margin-bottom: 40px;
 	}
 	&__panel {
 		width: 100%;
