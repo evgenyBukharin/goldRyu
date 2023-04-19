@@ -40,7 +40,7 @@
 		transition: border 0.3s ease-in-out, background 0.3s ease-in-out,
 			color 0.3s ease-in-out, opacity 0.3s ease;
 		position: relative;
-		background: var(--white-color);
+		background: transparent;
 		border: 2px solid var(--light-blue-color);
 		color: var(--dark-blue-color);
 		&-active {
