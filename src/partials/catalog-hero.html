@@ -57,7 +57,7 @@
 				<li class="catalog-hero__item-category">
 					<div
 						class="catalog-hero__container-image"
-						data-category="caps"
+						data-category="headings"
 					>
 						<picture class="catalog-hero__picture">
 							<source
@@ -127,6 +127,67 @@
 			</button>
 		</div>
 		<div class="container catalog-hero__container">
+			<div class="catalog-hero__filters">
+				<ul class="catalog-hero__list list-reset">
+					<li class="catalog-hero__item catalog-hero__item-title">
+						<h4 class="catalog-hero__title-list title__h4">
+							Категория
+						</h4>
+					</li>
+					<li class="catalog-hero__item">
+						<label class="catalog-hero__label">
+							<input
+								type="checkbox"
+								class="catalog-hero__input"
+								checked="checked"
+								data-category-filter="systems"
+							/>
+							<span class="catalog-hero__checkmark"></span>
+							<div class="catalog-hero__label-text">
+								Системы очистки
+							</div>
+						</label>
+					</li>
+					<li class="catalog-hero__item">
+						<label class="catalog-hero__label">
+							<input
+								type="checkbox"
+								class="catalog-hero__input"
+								checked="checked"
+								data-category-filter="stuff"
+							/>
+							<span class="catalog-hero__checkmark"></span>
+							<div class="catalog-hero__label-text">
+								Оборудование
+							</div>
+						</label>
+					</li>
+					<li class="catalog-hero__item">
+						<label class="catalog-hero__label">
+							<input
+								type="checkbox"
+								class="catalog-hero__input"
+								checked="checked"
+								data-category-filter="headings"
+							/>
+							<span class="catalog-hero__checkmark"></span>
+							<div class="catalog-hero__label-text">Крышки</div>
+						</label>
+					</li>
+					<li class="catalog-hero__item">
+						<label class="catalog-hero__label">
+							<input
+								type="checkbox"
+								class="catalog-hero__input"
+								checked="checked"
+								data-category-filter="service"
+							/>
+							<span class="catalog-hero__checkmark"></span>
+							<div class="catalog-hero__label-text">Услуги</div>
+						</label>
+					</li>
+				</ul>
+			</div>
 			<div class="catalog-hero__content">
 				<div class="catalog-hero__container-category" id="systems">
 					<h3 class="catalog-hero__title-category title__h3">
@@ -1221,7 +1282,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="catalog-hero__container-category" id="caps">
+				<div class="catalog-hero__container-category" id="headings">
 					<h3 class="catalog-hero__title-category title__h3">
 						Крышки
 					</h3>

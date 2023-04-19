@@ -8,6 +8,7 @@ import "./components/menu";
 import "./components/video-controller";
 import "./components/more-btn";
 import "./components/categories";
+import "./components/catalog-filters";
 import "./components/search-icons";
 import "./components/forms";
 import "./components/up-button";
