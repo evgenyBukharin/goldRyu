@@ -72,6 +72,7 @@
 	}
 	&__image {
 		opacity: 0;
+
 		filter: drop-shadow(
 				-90.0271px 71.5551px 80px rgba(38, 38, 38, 0.0266875)
 			)
@@ -86,6 +87,9 @@
 			drop-shadow(-8.66327px 6.88572px 2.45312px rgba(38, 38, 38, 0.14));
 		&-logo {
 			margin-bottom: 14px;
+		}
+		&-slide {
+			height: 100%;
 		}
 	}
 	&__content {
@@ -141,12 +145,16 @@
 			border-radius: 0;
 		}
 		&__slide {
-			border-radius: 0;
 			padding: 0;
 			background: var(--bg-color);
 			flex-wrap: wrap;
 			& .main-feedback__container-video {
 				display: none;
+			}
+		}
+		&__image {
+			&-slide {
+				height: unset;
 			}
 		}
 	}
