@@ -1,3 +1,4 @@
+import "./components/nav-anim";
 import "./components/accordion";
 import "./components/radio-switch";
 import "./components/sliders";

@@ -12,6 +12,24 @@
 		0px 22px 13px rgba(0, 0, 0, 0.0303704),
 		0px 10.1481px 6.51852px rgba(0, 0, 0, 0.037963),
 		0px 3.85185px 3.14815px rgba(0, 0, 0, 0.05);
+
+	// anim styles
+	box-sizing: content-box;
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	padding-top: 0;
+	padding-bottom: 0;
+	will-change: max-height;
+	transition: all 0.4s ease-out;
+	&-open {
+		opacity: 1;
+		padding-top: 24px;
+		padding-bottom: 25px;
+		max-height: fit-content;
+	}
+	// anim styles end
+
 	&__list {
 		display: flex;
 		align-items: center;
@@ -73,8 +91,10 @@
 
 @media (max-width: 768px) {
 	.nav {
-		padding-top: 10px;
-		padding-bottom: 18px;
+		&-open {
+			padding-top: 10px;
+			padding-bottom: 18px;
+		}
 		&__list {
 			flex-wrap: wrap;
 			justify-content: center;
