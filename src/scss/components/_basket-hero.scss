@@ -7,6 +7,11 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		gap: 30px;
+		&-image {
+			border-radius: 10px;
+			min-width: 190px;
+			background: var(--white-color);
+		}
 		&-left {
 			display: flex;
 			column-gap: 30px;
@@ -41,6 +46,8 @@
 	}
 	&__item {
 		display: flex;
+		justify-content: space-between;
+		column-gap: 22px;
 		padding-bottom: 22px;
 		border-bottom: 1px solid var(--border-color);
 		&-descr {
@@ -58,11 +65,8 @@
 		margin-top: 20px;
 		max-width: 380px;
 	}
-	&__image {
-		border-radius: 10px;
-		min-width: 190px;
-	}
 	&__price {
+		white-space: nowrap;
 		text-align: right;
 		margin: 0;
 		&:not(:last-child) {
@@ -178,8 +182,6 @@
 			width: 100%;
 		}
 		&__item {
-			justify-content: space-between;
-			column-gap: 22px;
 			&:not(:last-child) {
 				margin-bottom: 30px;
 			}
