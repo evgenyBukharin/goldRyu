@@ -15,6 +15,7 @@
 		}
 	}
 	&__item {
+		display: flex;
 		position: relative;
 		&:not(:last-child) {
 			margin-right: 60px;
@@ -37,6 +38,20 @@
 					grid-column: 8 span;
 				}
 			}
+		}
+		&-spec {
+			display: flex;
+			justify-content: space-between;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid var(--border-color);
+			&:first-child {
+				border-top: 1px solid var(--border-color);
+			}
+		}
+		&-delivery {
+			align-items: center;
+			grid-column: 12 span !important;
 		}
 	}
 	&__btn {
@@ -69,13 +84,47 @@
 				-4.8609px 3.54392px 2.45312px rgba(0, 0, 0, 0.15);
 			border-radius: 15px;
 		}
+		&-shadow {
+			box-shadow: none;
+			filter: drop-shadow(
+					-90.0271px 71.5551px 80px rgba(38, 38, 38, 0.0266875)
+				)
+				drop-shadow(
+					-67.6151px 53.7417px 53.9219px rgba(38, 38, 38, 0.0455)
+				)
+				drop-shadow(
+					-49.4415px 39.297px 34.875px rgba(38, 38, 38, 0.0590625)
+				)
+				drop-shadow(
+					-35.1209px 27.9147px 21.6406px rgba(38, 38, 38, 0.07)
+				)
+				drop-shadow(
+					-24.2682px 19.2888px 13px rgba(38, 38, 38, 0.0809375)
+				)
+				drop-shadow(
+					-16.4978px 13.1128px 7.73438px rgba(38, 38, 38, 0.0945)
+				)
+				drop-shadow(
+					-11.4246px 9.08049px 4.625px rgba(38, 38, 38, 0.113312)
+				)
+				drop-shadow(
+					-8.66327px 6.88572px 2.45312px rgba(38, 38, 38, 0.14)
+				);
+		}
 	}
 	&__text {
 		max-width: 255px;
+		&-spec {
+			color: var(--black-color);
+		}
 	}
 	&__title {
 		margin: 0;
 		margin-bottom: 30px;
+		&-delivery {
+			margin: 0;
+			color: var(--light-blue-color);
+		}
 	}
 }
 
@@ -143,6 +192,11 @@
 		}
 		&__content {
 			margin-top: 30px;
+		}
+		&__title {
+			&-delivery {
+				font-size: 20px;
+			}
 		}
 	}
 }
@@ -220,6 +274,9 @@
 			font-weight: 600;
 			font-size: 20px;
 			line-height: 25px;
+			&-delivery {
+				text-align: center;
+			}
 		}
 	}
 }
