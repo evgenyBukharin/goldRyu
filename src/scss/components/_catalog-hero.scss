@@ -17,6 +17,12 @@
 			margin-bottom: 10px;
 			position: relative;
 			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 186px;
+			& a {
+				margin-right: -1px;
+			}
 		}
 		&-quantity {
 			display: flex;
@@ -280,6 +286,9 @@
 		max-width: 249px;
 		margin-top: -5px;
 		margin-bottom: 10px;
+	}
+	&__picture {
+		display: flex;
 	}
 }
 
