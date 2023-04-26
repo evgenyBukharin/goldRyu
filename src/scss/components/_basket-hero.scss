@@ -171,6 +171,8 @@
 
 @media (max-width: 1024px) {
 	.basket-hero {
+		padding-top: 70px;
+		padding-bottom: 105px;
 		&__container {
 			flex-wrap: wrap;
 			justify-content: flex-start;
@@ -215,6 +217,8 @@
 
 @media (max-width: 480px) {
 	.basket-hero {
+		padding-top: 50px;
+		padding-bottom: 240px;
 		&__image {
 			min-width: 133px;
 		}
@@ -254,6 +258,12 @@
 				align-items: flex-start;
 			}
 		}
+	}
+}
+
+@media (max-width: 360px) {
+	.basket-hero {
+		padding-bottom: 130px;
 	}
 }
 
