@@ -73,6 +73,11 @@
 			color: var(--darker-blue-color);
 		}
 	}
+	&__icon {
+		&-search {
+			transform: translate3d(0, 0, 0);
+		}
+	}
 }
 
 @media (max-width: 480px) {
