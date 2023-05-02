@@ -13,6 +13,7 @@ if (formSection !== null) {
 		enableScroll();
 	});
 
+	// кнопки появления секции со всеми формами
 	const openFormsBtns = document.querySelectorAll(".open-form-btn");
 	openFormsBtns.forEach((button) => {
 		button.addEventListener("click", () => {
@@ -23,6 +24,7 @@ if (formSection !== null) {
 		});
 	});
 
+	// кнопки закрытия секции со всеми формами
 	const closeBtns = formSection.querySelectorAll(".forms__button-close");
 	closeBtns.forEach((button) => {
 		button.addEventListener("click", () => {
@@ -40,6 +42,7 @@ if (formSection !== null) {
 		});
 	});
 
+	// кнопка на первом фрейме для регистрации по почте
 	const emailEnterButton = formSection.querySelector(".forms__item-email");
 	const emailRegContainer = document.getElementById("emailRegContainer");
 	emailEnterButton.addEventListener("click", () => {
@@ -49,6 +52,7 @@ if (formSection !== null) {
 		emailRegContainer.classList.remove("forms__container-inner-hidden");
 	});
 
+	// форма входа по логину
 	const loginFormsBtns = formSection.querySelectorAll(".login-form-btn");
 	const loginFormContainer = document.getElementById("loginFormContainer");
 	loginFormsBtns.forEach((btn) => {
@@ -62,6 +66,7 @@ if (formSection !== null) {
 		});
 	});
 
+	// кнопки с переходом на форму смены пароля
 	const recoverFormsBtn = formSection.querySelector(".forms__button-recover");
 	const recoverFormContainer = document.getElementById(
 		"recoverFormContainer"
@@ -73,6 +78,7 @@ if (formSection !== null) {
 		recoverFormContainer.classList.remove("forms__container-inner-hidden");
 	});
 
+	// кнопки перехода на форму регистрации по почте
 	const regFormsBtns = formSection.querySelectorAll(".forms__button-reg");
 	regFormsBtns.forEach((btn) => {
 		btn.addEventListener("click", () => {
@@ -83,6 +89,7 @@ if (formSection !== null) {
 		});
 	});
 
+	// кнопки возвращения на первый фрейм секции (главная форма)
 	const mainFormBackBtns = document.querySelectorAll(".main-form-fack-btn");
 	const mainFormContainer = document.getElementById("main-form-container");
 	mainFormBackBtns.forEach((btn) => {
@@ -93,11 +100,37 @@ if (formSection !== null) {
 			mainFormContainer.classList.remove("forms__container-inner-hidden");
 		});
 	});
+
+	// кнопки возвращения к форме входа
 	const loginFormBackBtn = document.getElementById("login-form-back-btn");
 	loginFormBackBtn.addEventListener("click", () => {
 		formsContainersInner.forEach((container) => {
 			container.classList.add("forms__container-inner-hidden");
 		});
 		loginFormContainer.classList.remove("forms__container-inner-hidden");
+	});
+
+	// переход к форме восстановления пароля после отправки письма
+	const newPasswordForm = document.getElementById("newPasswordForm");
+	const newPasswordFormContainer = document.getElementById(
+		"newPasswordFormContainer"
+	);
+	newPasswordForm.addEventListener("submit", (e) => {
+		e.preventDefault();
+		formsContainersInner.forEach((container) => {
+			container.classList.add("forms__container-inner-hidden");
+		});
+		newPasswordFormContainer.classList.remove(
+			"forms__container-inner-hidden"
+		);
+	});
+
+	// кнопка возвращения к форме смены пароля
+	const recoverFormBackBtn = document.getElementById("recover-form-back-btn");
+	recoverFormBackBtn.addEventListener("click", () => {
+		formsContainersInner.forEach((container) => {
+			container.classList.add("forms__container-inner-hidden");
+		});
+		recoverFormContainer.classList.remove("forms__container-inner-hidden");
 	});
 }

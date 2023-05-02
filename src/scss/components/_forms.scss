@@ -68,6 +68,9 @@
 	&__title {
 		margin: 0;
 		margin-bottom: 30px;
+		&-code {
+			margin-bottom: 12px;
+		}
 	}
 	&__logo {
 		align-self: flex-end;
@@ -82,9 +85,17 @@
 		}
 		&-blue {
 			color: var(--blue-color);
+			text-align: center;
 		}
 		&-enter {
 			margin: 0;
+		}
+		&-code {
+			margin: 0;
+			font-size: 14px;
+			line-height: 120%;
+			margin-bottom: 12px;
+			font-weight: 400;
 		}
 	}
 	&__form {
@@ -152,6 +163,20 @@
 	.forms {
 		&__container {
 			padding-top: 40px;
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.forms {
+		&__content {
+			padding-left: 20px;
+			padding-right: 25px;
+		}
+		&__container {
+			&-inner {
+				height: 530px;
+			}
 		}
 	}
 }
