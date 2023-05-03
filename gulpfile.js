@@ -251,7 +251,7 @@ const resources = () => {
 };
 
 const images = () => {
-	return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,webm}`])
+	return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,webm,mp4}`])
 		.pipe(
 			gulpif(
 				isProd,
