@@ -30,7 +30,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 // paths
 const srcFolder = "./src";
-const buildFolder = "./app";
+const buildFolder = "./public";
 const paths = {
 	srcSvg: `${srcFolder}/img/svg/**.svg`,
 	srcImgFolder: `${srcFolder}/img`,
@@ -251,7 +251,7 @@ const resources = () => {
 };
 
 const images = () => {
-	return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`])
+	return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,webm}`])
 		.pipe(
 			gulpif(
 				isProd,
