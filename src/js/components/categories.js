@@ -17,10 +17,13 @@ if (
 		category.addEventListener("click", () => {
 			const boundedCategory = category.getAttribute("data-category");
 			const boundCategoryElem = document.getElementById(boundedCategory);
-			const boundFilterElem = document
-				.querySelector(`[data-category-filter="${boundedCategory}"]`)
-				.closest(".catalog-hero__item");
-			console.log(boundFilterElem);
+			const boundFilterInput = document.querySelector(
+				`[data-category-filter="${boundedCategory}"]`
+			);
+			const boundFilterElem = boundFilterInput.closest(
+				".catalog-hero__item"
+			);
+			boundFilterInput.setAttribute("checked", "checked");
 			boundCategoryElem.classList.add(
 				"catalog-hero__container-category-first"
 			);
@@ -34,15 +37,6 @@ if (
 			let categoryBlocks = document.querySelectorAll(
 				".catalog-hero__container-category"
 			);
-			if (
-				categoryBlocks[categoryBlocks.length - 1] !== boundCategoryElem
-			) {
-				categoryBlocks[categoryBlocks.length - 1].style.marginBottom =
-					"0";
-			} else {
-				categoryBlocks[categoryBlocks.length - 2].style.marginBottom =
-					"0";
-			}
 		});
 	});
 }
