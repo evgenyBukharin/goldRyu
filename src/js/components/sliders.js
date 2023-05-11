@@ -176,7 +176,6 @@ const designSlider = new Swiper(".main-design__slider", {
 	allowSlidePrev: false,
 });
 
-// designSlider.activeIndex = 1;
 const slideToHide = document.querySelector(".main-design__slide-tohide");
 const designNextBtn = document.querySelector(".main-design__button-next");
 if (designNextBtn !== null) {
@@ -186,13 +185,22 @@ if (designNextBtn !== null) {
 		const checkedInputs = designForm.querySelectorAll(
 			".main-design__label-active .main-design__input"
 		);
-		const checkedInputImagePath = designForm
-			.querySelector(".main-design__label-active .main-design__image")
-			.getAttribute("src");
+		const checkedInput = designForm.querySelector(
+			".main-design__label-active"
+		);
+		const checkedInputImage = checkedInput.querySelector(
+			".main-design__image"
+		);
+		const checkedInputImagePath = checkedInputImage.getAttribute("src");
+		const checkedInputOldPrice =
+			checkedInputImage.getAttribute("data-old-price");
+		const checkedInputPrice = checkedInputImage.getAttribute("data-price");
 
 		if (checkedInputs !== null) {
 			const formData = {
 				img: checkedInputImagePath,
+				oldPrice: checkedInputOldPrice,
+				price: checkedInputPrice,
 			};
 			checkedInputs.forEach((input) => {
 				formData[input.name] = input.value;
@@ -221,6 +229,20 @@ if (designNextBtn !== null) {
 			);
 			importedColors.forEach((importedColor) => {
 				importedColor.innerHTML = `Цвет: ${formData.color}`;
+			});
+
+			const importedPrice = document.querySelectorAll(
+				".main-design__text-price"
+			);
+			importedPrice.forEach((importedPrice) => {
+				importedPrice.innerHTML = `${formData.price} ₽`;
+			});
+
+			const importedPriceOld = document.querySelectorAll(
+				".main-design__text-price-old"
+			);
+			importedPriceOld.forEach((importedPriceOld) => {
+				importedPriceOld.innerHTML = `${formData.oldPrice} ₽`;
 			});
 
 			designSlider.allowSlideNext = true;

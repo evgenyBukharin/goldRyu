@@ -1,4 +1,7 @@
 .quiz {
+	&__main {
+		padding-top: 0;
+	}
 	&__body {
 		background: var(--white-color);
 	}
