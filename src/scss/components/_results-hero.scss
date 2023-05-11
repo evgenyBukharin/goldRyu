@@ -59,3 +59,33 @@
 		border-radius: 12px;
 	}
 }
+
+@media (max-width: 480px) {
+	.results-hero {
+		&__title {
+			font-size: 38px;
+		}
+	}
+}
+
+@media (max-width: 430px) {
+	.results-hero {
+		&__item {
+			flex-direction: column-reverse;
+			column-gap: 0px;
+			row-gap: 20px;
+			align-items: center;
+		}
+		&__image {
+			width: 80%;
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.results-hero {
+		&__image {
+			width: 100%;
+		}
+	}
+}
