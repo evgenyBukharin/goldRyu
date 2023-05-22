@@ -205,7 +205,6 @@ quizInnerSlider.on("activeIndexChange", () => {
 	quizInnerCurrent.innerHTML = quizInnerSlider.activeIndex + 1;
 });
 quizInnerSlider.on("reachEnd", () => {
-	console.log("end");
 	const nextBtn = document.querySelector(".quiz__button-next");
 	setTimeout(() => {
 		nextBtn.removeAttribute("disabled");
