@@ -1,4 +1,5 @@
 .button {
+	box-sizing: border-box;
 	padding: 5px 15px;
 	font-weight: 600;
 	font-size: 14px;
@@ -42,6 +43,7 @@
 		position: relative;
 		background: transparent;
 		border: 2px solid var(--light-blue-color);
+		padding: 3px 15px;
 		color: var(--dark-blue-color);
 		&-active {
 			background: var(--dark-blue-color);
@@ -59,17 +61,17 @@
 		}
 		&::after {
 			content: "";
-			width: calc(100% + 8px);
-			height: calc(100% + 8px);
+			width: calc(100% + 4px);
+			height: calc(100% + 4px);
 			border-radius: 10px;
 			background: transparent;
 			position: absolute;
-			top: -4px;
-			left: -4px;
+			top: -2px;
+			left: -2px;
 			border: 4px solid var(--blue-color);
 			opacity: 0;
 			visibility: hidden;
-			transition: opacity 0.3s ease;
+			transition: opacity 0.4s ease;
 		}
 		&:disabled {
 			color: var(--white-color);

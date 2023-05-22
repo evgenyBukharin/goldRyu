@@ -4,7 +4,7 @@ const nav = document.querySelector(".nav");
 
 if (main !== null && header !== null && nav !== null) {
 	// main offset
-	main.style.paddingTop = header.scrollHeight + "px";
+	main.style.paddingTop = header.offsetHeight + "px";
 
 	// nav animation
 	let lastScroll = 0;
