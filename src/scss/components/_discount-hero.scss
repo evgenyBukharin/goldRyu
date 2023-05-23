@@ -49,11 +49,21 @@
 	}
 }
 
+@media (max-width: 1024px) {
+	.discount-hero {
+		&__container {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+}
+
 @media (max-width: 768px) {
 	.discount-hero {
 		padding-bottom: 60px;
 	}
 }
+
 @media (max-width: 480px) {
 	.discount-hero {
 		&__item {
@@ -63,6 +73,10 @@
 			font-weight: 600;
 			font-size: 28px;
 			line-height: 30px;
+		}
+		&__container {
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	}
 }

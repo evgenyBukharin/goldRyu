@@ -57,6 +57,10 @@
 		&__advantages {
 			margin-top: 0;
 		}
+		&__container {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
 		&__text {
 			&-shorter {
 				max-width: 447px;
@@ -73,8 +77,6 @@
 		}
 		&__container {
 			flex-wrap: wrap;
-			padding-right: 50px;
-			padding-left: 50px;
 		}
 		&__text {
 			&-shorter {

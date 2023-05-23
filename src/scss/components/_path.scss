@@ -31,6 +31,15 @@
 	}
 }
 
+@media (max-width: 1024px) {
+	.path {
+		&__container {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+}
+
 @media (max-width: 768px) {
 	.path {
 		margin-top: 35px;

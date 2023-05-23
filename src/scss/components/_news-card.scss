@@ -18,3 +18,21 @@
 		line-height: 23px;
 	}
 }
+
+@media (max-width: 1024px) {
+	.news-card {
+		&__container {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.news-card {
+		&__container {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}

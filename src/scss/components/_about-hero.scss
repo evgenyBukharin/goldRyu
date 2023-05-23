@@ -24,7 +24,7 @@
 			margin-right: 30px;
 		}
 		&:not(:last-child) {
-			margin-bottom: 70px;
+			margin-bottom: 50px;
 		}
 	}
 	&__title {
@@ -65,17 +65,28 @@
 	}
 	&__image {
 		min-width: 480px;
+		filter: drop-shadow(-5px 10px 20px rgba(0, 0, 0, 0.1));
+		border-radius: 10px;
 	}
 }
 
 @media (max-width: 1024px) {
 	.about-hero {
 		&__container {
+			padding-left: 50px;
+			padding-right: 50px;
 			&-text {
 				flex-wrap: wrap;
 				justify-content: center;
 				row-gap: 28px;
 			}
+			&-article {
+				max-width: unset;
+			}
+		}
+		&__image {
+			min-width: unset;
+			width: 100%;
 		}
 	}
 }
@@ -85,11 +96,21 @@
 		&__stats {
 			margin-top: 40px;
 			flex-direction: column;
-			row-gap: 16px;
+			row-gap: 30px;
 		}
 		&__stat {
 			&:not(:last-child) {
 				margin-right: 0;
+			}
+		}
+		&__title {
+			&-stat {
+				text-align: center;
+			}
+		}
+		&__subtitle {
+			&-stat {
+				text-align: center;
 			}
 		}
 	}
@@ -97,8 +118,9 @@
 
 @media (max-width: 480px) {
 	.about-hero {
-		&__image {
-			min-width: unset;
+		&__container {
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 		&__stats {
 			margin-top: 20px;
@@ -106,6 +128,7 @@
 		&__title {
 			&-stat {
 				font-size: 38px;
+				line-height: 120%;
 			}
 		}
 	}
@@ -113,12 +136,10 @@
 
 @media (max-width: 425px) {
 	.about-hero {
-		&__image {
-			min-width: unset;
-		}
 		&__title {
 			&-stat {
 				font-size: 30px;
+				line-height: 120%;
 			}
 		}
 	}
@@ -128,8 +149,10 @@
 	.about-hero {
 		&__title {
 			font-size: 40px;
+			line-height: 120%;
 			&-stat {
 				font-size: 26px;
+				line-height: 120%;
 			}
 		}
 	}

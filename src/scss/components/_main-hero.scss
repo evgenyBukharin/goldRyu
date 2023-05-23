@@ -145,11 +145,14 @@
 			border-radius: 0;
 		}
 		&__slide {
-			padding: 0;
+			padding: 30px;
 			background: var(--bg-color);
 			flex-wrap: wrap;
 			& .main-feedback__container-video {
 				display: none;
+			}
+			&-image {
+				padding: 0;
 			}
 		}
 		&__image {

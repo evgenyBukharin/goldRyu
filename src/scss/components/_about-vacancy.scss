@@ -39,6 +39,15 @@
 	}
 }
 
+@media (max-width: 1024px) {
+	.about-vacancy {
+		&__container {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+}
+
 @media (max-width: 768px) {
 	.about-vacancy {
 		padding-top: 0;
@@ -51,6 +60,15 @@
 				width: 100%;
 				justify-content: space-between;
 			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.about-vacancy {
+		&__container {
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	}
 }

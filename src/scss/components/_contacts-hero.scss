@@ -117,3 +117,12 @@
 		}
 	}
 }
+
+@media (max-width: 480px) {
+	.contacts-hero {
+		&__container {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}

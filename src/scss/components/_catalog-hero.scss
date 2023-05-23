@@ -295,6 +295,9 @@
 	&__picture {
 		display: flex;
 	}
+	&__form {
+		width: 100%;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -384,7 +387,7 @@
 					}
 					&__button {
 						&-category {
-							max-width: 222px;
+							max-width: 100%;
 						}
 					}
 				}

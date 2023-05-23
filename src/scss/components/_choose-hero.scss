@@ -71,6 +71,10 @@
 
 @media (max-width: 1024px) {
 	.choose-hero {
+		&__container {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
 		&__banner {
 			padding: 23px 65px 30px 59px;
 		}
@@ -146,6 +150,10 @@
 		}
 		&__button {
 			margin-top: 25px;
+		}
+		&__container {
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	}
 }

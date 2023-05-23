@@ -63,6 +63,8 @@
 	.docs-hero {
 		&__container {
 			padding-top: 0;
+			padding-left: 50px;
+			padding-right: 50px;
 		}
 		&__control {
 			padding-left: 20px;
@@ -89,6 +91,10 @@
 
 @media (max-width: 480px) {
 	.docs-hero {
+		&__container {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 		&__item {
 			grid-column: 6 span;
 		}
