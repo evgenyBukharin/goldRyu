@@ -76,6 +76,11 @@
 				}
 			}
 		}
+		&-buttons {
+			display: flex;
+			gap: 40px;
+			margin-bottom: 35px;
+		}
 	}
 	&__link {
 		color: var(--light-blue-color);
@@ -234,7 +239,6 @@
 	}
 	&__button {
 		display: flex;
-		margin-bottom: 30px;
 		&-basket {
 			margin-top: 15px;
 			margin-bottom: 27px;
@@ -323,7 +327,6 @@
 			}
 		}
 		&__button {
-			margin-bottom: 50px;
 			&-basket {
 				width: 100%;
 				justify-content: center;
@@ -344,6 +347,9 @@
 			}
 			&-image {
 				min-height: 260px;
+			}
+			&-buttons {
+				margin-bottom: 50px;
 			}
 		}
 		&__filters {
