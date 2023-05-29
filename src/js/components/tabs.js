@@ -104,7 +104,7 @@ const catalogtabs = new Tabs(
 		button: "catalog-item-tabs__btn",
 		panel: "catalog-item-tabs__panel",
 	},
-	2
+	0
 );
 
 const quizTabs = new Tabs(

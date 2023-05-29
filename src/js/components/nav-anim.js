@@ -11,18 +11,15 @@ if (main !== null && header !== null && nav !== null) {
 	const scrollPosition = () => window.pageYOffset;
 	const containOpen = () => nav.classList.contains("nav-open");
 	window.addEventListener("scroll", () => {
-		console.log(window.pageYOffset);
-		if (scrollPosition() > lastScroll && containOpen()) {
-			if (scrollPosition() >= 0) {
+		if (scrollPosition() > 0) {
+			if (scrollPosition() > lastScroll && containOpen()) {
 				nav.classList.remove("nav-open");
 				nav.style.maxHeight = null;
+			} else if (scrollPosition() < lastScroll && !containOpen()) {
+				nav.classList.add("nav-open");
+				nav.style.maxHeight = nav.scrollHeight + "px";
 			}
-		} else if (scrollPosition() < lastScroll && !containOpen()) {
-			nav.classList.add("nav-open");
-			nav.style.maxHeight = nav.scrollHeight + "px";
+			lastScroll = scrollPosition();
 		}
-		lastScroll = scrollPosition();
 	});
 }
-
-alert(window.innerWidth);

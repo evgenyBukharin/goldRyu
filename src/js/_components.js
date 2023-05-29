@@ -1,4 +1,5 @@
 import "./components/nav-anim";
+import "./components/barrelAdaptivity";
 import "./components/links-simulation";
 import "./components/accordion";
 import "./components/radio-switch";
