@@ -406,6 +406,6 @@ exports.cache = series(cache, rewrite);
 exports.zip = zipFiles;
 
 function deploy(cb) {
-	ghPages.publish(path.join(process.cwd(), "./app"), cb);
+	ghPages.publish(path.join(process.cwd(), "./public"), cb);
 }
 exports.deploy = deploy;
