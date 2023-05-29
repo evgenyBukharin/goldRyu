@@ -13,8 +13,10 @@ if (main !== null && header !== null && nav !== null) {
 	window.addEventListener("scroll", () => {
 		console.log(window.pageYOffset);
 		if (scrollPosition() > lastScroll && containOpen()) {
-			nav.classList.remove("nav-open");
-			nav.style.maxHeight = null;
+			if (scrollPosition() >= 0) {
+				nav.classList.remove("nav-open");
+				nav.style.maxHeight = null;
+			}
 		} else if (scrollPosition() < lastScroll && !containOpen()) {
 			nav.classList.add("nav-open");
 			nav.style.maxHeight = nav.scrollHeight + "px";
