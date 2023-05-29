@@ -255,6 +255,7 @@
 				const scrollPosition = () => window.pageYOffset;
 				const containOpen = () => nav.classList.contains("nav-open");
 				window.addEventListener("scroll", () => {
+					console.log(window.pageYOffset);
 					if (scrollPosition() > lastScroll && containOpen()) {
 						nav.classList.remove("nav-open");
 						nav.style.maxHeight = null;
@@ -268,6 +269,7 @@
 					lastScroll = scrollPosition();
 				});
 			}
+			alert(window.innerWidth);
 
 			/***/
 		},
