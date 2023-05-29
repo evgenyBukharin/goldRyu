@@ -33,6 +33,43 @@
 			/***/
 		},
 
+		/***/ 679: /***/ () => {
+			const barrelImage = document.querySelector(
+				".main-corpus__background-second"
+			);
+			navigator.saysWho = (() => {
+				const { userAgent } = navigator;
+				let match =
+					userAgent.match(
+						/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i
+					) || [];
+				let temp;
+				if (/trident/i.test(match[1])) {
+					temp = /\brv[ :]+(\d+)/g.exec(userAgent) || [];
+					return `IE ${temp[1] || ""}`;
+				}
+				if (match[1] === "Chrome") {
+					temp = userAgent.match(/\b(OPR|Edge)\/(\d+)/);
+					if (temp !== null) {
+						return temp.slice(1).join(" ").replace("OPR", "Opera");
+					}
+					temp = userAgent.match(/\b(Edg)\/(\d+)/);
+					if (temp !== null) {
+						return temp
+							.slice(1)
+							.join(" ")
+							.replace("Edg", "Edge (Chromium)");
+					}
+				}
+				return match[1];
+			})();
+			if (barrelImage !== null && navigator.saysWho == "Safari") {
+				barrelImage.style.filter = "none";
+			}
+
+			/***/
+		},
+
 		/***/ 661: /***/ () => {
 			const changeLabels = document.querySelectorAll(
 				".cabinet-hero__label-change"
@@ -255,21 +292,21 @@
 				const scrollPosition = () => window.pageYOffset;
 				const containOpen = () => nav.classList.contains("nav-open");
 				window.addEventListener("scroll", () => {
-					console.log(window.pageYOffset);
-					if (scrollPosition() > lastScroll && containOpen()) {
-						nav.classList.remove("nav-open");
-						nav.style.maxHeight = null;
-					} else if (
-						scrollPosition() < lastScroll &&
-						!containOpen()
-					) {
-						nav.classList.add("nav-open");
-						nav.style.maxHeight = nav.scrollHeight + "px";
+					if (scrollPosition() > 0) {
+						if (scrollPosition() > lastScroll && containOpen()) {
+							nav.classList.remove("nav-open");
+							nav.style.maxHeight = null;
+						} else if (
+							scrollPosition() < lastScroll &&
+							!containOpen()
+						) {
+							nav.classList.add("nav-open");
+							nav.style.maxHeight = nav.scrollHeight + "px";
+						}
+						lastScroll = scrollPosition();
 					}
-					lastScroll = scrollPosition();
 				});
 			}
-			alert(window.innerWidth);
 
 			/***/
 		},
@@ -413,6 +450,8 @@
 		};
 		// EXTERNAL MODULE: ./src/js/components/nav-anim.js
 		var nav_anim = __webpack_require__(240);
+		// EXTERNAL MODULE: ./src/js/components/barrelAdaptivity.js
+		var barrelAdaptivity = __webpack_require__(679);
 		// EXTERNAL MODULE: ./src/js/components/links-simulation.js
 		var links_simulation = __webpack_require__(691);
 		// EXTERNAL MODULE: ./src/js/components/accordion.js
@@ -11875,7 +11914,7 @@
 				button: "catalog-item-tabs__btn",
 				panel: "catalog-item-tabs__panel",
 			},
-			2
+			0
 		);
 		const quizTabs = new Tabs(
 			"quizTab",
