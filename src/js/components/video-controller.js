@@ -45,3 +45,18 @@ videoContainers.forEach((container) => {
 		}
 	});
 });
+
+const mediaQuery390 = window.matchMedia("(max-width: 390px)");
+const mediaQuery480 = window.matchMedia("(max-width: 480px)");
+const mediaQuery768 = window.matchMedia("(max-width: 768px)");
+const mediaQuery1024 = window.matchMedia("(max-width: 1024px)");
+const mediaQuery1920 = window.matchMedia("(max-width: 1920px)");
+
+alert(
+	`Ширина окна: ${window.innerWidth}px,
+	\nМедиа запрос 390: ${mediaQuery390.matches},
+	\nМедиа запрос 480: ${mediaQuery480.matches},
+	\nМедиа запрос 768: ${mediaQuery768.matches},
+	\nМедиа запрос 1024: ${mediaQuery1024.matches},
+	\nМедиа запрос 1920: ${mediaQuery1920.matches}`
+);
