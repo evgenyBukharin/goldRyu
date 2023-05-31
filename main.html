@@ -222,7 +222,7 @@
 						</div>
 					</div>
 					<div class="main-feedback__container-video">
-						<div class="main-feedback__video-play">
+						<!-- <div class="main-feedback__video-play">
 							<img
 								loading="lazy"
 								src="./img/play.svg"
@@ -231,16 +231,18 @@
 								height="37"
 								alt="Иконка play"
 							/>
-						</div>
-						<div
+						</div> -->
+						<!-- <div
 							class="main-feedback__video-control main-feedback__video-over"
-						></div>
+						></div> -->
 						<video
-							preload="auto"
 							muted
 							class="main-feedback__video"
 							width="607"
 							height="340"
+							autoplay
+							controls
+							playsinline
 						>
 							<source
 								src="./img/main-video.mp4"
@@ -251,11 +253,11 @@
 								type="video/webm"
 							/>
 						</video>
-						<div class="main-feedback__container-fullscreen">
+						<!-- <div class="main-feedback__container-fullscreen">
 							<button
 								class="btn-reset main-feedback__button-fullscreen"
 							></button>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
@@ -292,20 +294,6 @@
 							</a>
 						</div>
 					</div>
-					<!-- <picture>
-						<source
-							srcset="./img/slide-image.webp"
-							type="image/webp"
-						/>
-						<img
-							loading="lazy"
-							src="./img/slide-image.png"
-							class="image main-hero__image"
-							width="532"
-							height="476"
-							alt="Изображение слайда"
-						/>
-					</picture> -->
 				</div>
 			</div>
 		</div>
